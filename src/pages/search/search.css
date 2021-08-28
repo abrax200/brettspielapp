@@ -1,0 +1,48 @@
+.searchbar{
+    background-color: var(--shade2);
+    width: 100%;
+    padding: 0 15px;
+    margin: 10px 15px;
+    height: 40px;
+    border-radius: 100000px;
+    border: 1px solid var(--border);
+    outline: none;
+    vertical-align: middle;
+    
+    font-size:16px;
+    font-family: Roboto, sans-serif;
+    color: white;
+}
+
+.searchbar_container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.gamecard>table>tr>td{
+    font-family: Roboto, sans-serif;
+    color: white;
+    font-size: large;
+    border: none;
+}
+
+.gamecard>table{
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    color: white;
+    font-size: large;
+}
+
+.gamecard{
+    background-image: linear-gradient(-45deg, var(--red2), var(--red));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0 15px 10px 15px;
+    margin: 10px 15px;
+}
+
+.sociallevel{
+    border-radius: 3px;
+    padding: 1px 5px;
+}

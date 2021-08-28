@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="settings.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="1"
+     inkscape:cx="341.99999"
+     inkscape:cy="347.49999"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="100mm" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5582"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5576"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5246"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5240"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5053"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4717"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4711"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4703"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4617"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3537"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2445"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path6348"
+       style="fill:#999999;fill-opacity:1;stroke-width:3.37672;stroke-linecap:round;stroke-linejoin:round"
+       d="M 50.000048,8.3334351 A 41.666667,41.666665 0 0 0 8.3333414,50.000142 41.666667,41.666665 0 0 0 50.000048,91.666849 41.666667,41.666665 0 0 0 91.666755,50.000142 41.666667,41.666665 0 0 0 50.000048,8.3334351 Z m 0.294039,18.9016879 c 3.414834,0.02296 6.802832,0.834388 9.846426,2.392103 7.083925,3.415948 12.043553,10.78313 12.571328,18.622118 0.547695,6.216443 -1.700803,12.553746 -5.895766,17.146756 -4.045558,4.375269 -9.868035,7.277643 -15.877582,7.322553 -6.314469,0.427821 -12.649666,-2.178942 -17.088363,-6.634739 -4.09312,-4.131231 -6.713281,-9.8942 -6.581511,-15.758726 -0.23464,-3.913397 0.875795,-7.796432 2.740401,-11.211203 3.777335,-7.100123 11.554481,-11.82578 19.601905,-11.87266 0.227798,-0.0055 0.455506,-0.0077 0.683162,-0.0062 z M 41.03429,0 V 28.433482 L 20.948099,8.3529366 8.3213942,20.97648 28.43878,41.08821 H 0 V 58.940279 H 28.430692 L 8.3213942,79.043924 20.948099,91.667083 41.071262,71.549574 V 100 H 58.928349 V 71.56921 L 79.031871,91.667083 91.658573,79.043924 71.549278,58.940279 H 100 V 41.08821 H 71.488814 L 91.652415,20.930277 79.025708,8.3071198 58.891378,28.435791 V 0 Z m 8.965708,30.10946 A 19.91092,19.905324 0 0 1 69.910956,50.014821 19.91092,19.905324 0 0 1 49.999998,69.920183 19.91092,19.905324 0 0 1 30.08904,50.014821 19.91092,19.905324 0 0 1 49.999998,30.10946 Z" />
+  </g>
+</svg>

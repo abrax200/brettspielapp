@@ -1,0 +1,156 @@
+{
+  "Kitchen Rush": {
+    "spielerzahl": [
+      1,
+      4
+    ],
+    "spielmodi": "Solo,kooperativ",
+    "spieldauer": 15,
+    "spielziel": "Aufgaben erfuellen",
+    "spielmechanik": "Echtzeit,gleichzeitig spielen",
+    "thema": "Lebensmittel,Berufsleben,Realitaet",
+    "sprache": "DE",
+    "alter": 10,
+    "kommunikationslevel": 4
+  },
+  "Legenden von Andor": {
+    "spielerzahl": [
+      1,
+      6
+    ],
+    "spielmodi": "Solo,kooperativ",
+    "spieldauer": 90,
+    "spielziel": "Aufgaben erfuellen",
+    "spielmechanik": "gleichzeitig spielen,wuerfeln,Figuren bewegen",
+    "thema": "Helden,Fantasy",
+    "sprache": "DE",
+    "alter": 8,
+    "kommunikationslevel": 4
+  },
+  "Marvel United": {
+    "spielerzahl": [
+      1,
+      4
+    ],
+    "spielmodi": "Solo,kooperativ",
+    "spieldauer": 45,
+    "spielziel": "Boss besiegen,Aufgaben erfuellen",
+    "spielmechanik": "Kartenspiel,Hand Management,Figuren bewegen",
+    "thema": "Helden,Comic,Miniaturen",
+    "sprache": "DE/EN",
+    "alter": 8,
+    "kommunikationslevel": 3
+  },
+  "Harry Potter: Schlacht um Hogwarts": {
+    "spielerzahl": [
+      1,
+      4
+    ],
+    "spielmodi": "Solo,kooperativ",
+    "spieldauer": 60,
+    "spielziel": "Gegner besiegen",
+    "spielmechanik": "Deckbuilder",
+    "thema": "Legacy,Kampagne,Fantasy",
+    "sprache": "DE",
+    "alter": 10,
+    "kommunikationslevel": 3
+  },
+  "Kneipenquiz": {
+    "spielerzahl": [
+      1,
+      999
+    ],
+    "spielmodi": "Solo,kooperativ",
+    "spieldauer": 45,
+    "spielziel": "KI Gegner besiegen,Rennen",
+    "spielmechanik": "Quiz,Rennen",
+    "thema": "Quiz,Fragen ohne Antwortmoeglichkeiten",
+    "sprache": "DE",
+    "alter": 12,
+    "kommunikationslevel": 4
+  },
+  "Phantom the Card Game": {
+    "spielerzahl": [
+      1,
+      2
+    ],
+    "spielmodi": "Solo,kooperativ",
+    "spieldauer": 45,
+    "spielziel": "Aufgaben erfuellen",
+    "spielmechanik": "Deckbuilder,Hand Management",
+    "thema": "Helden,Comic",
+    "sprache": "EN",
+    "alter": 10,
+    "kommunikationslevel": 2
+  },
+  "The Game": {
+    "spielerzahl": [
+      1,
+      5
+    ],
+    "spielmodi": "Solo,kooperativ",
+    "spieldauer": 15,
+    "spielziel": "Aufgaben erfuellen",
+    "spielmechanik": "Kartenspiel,Hand Management,Anlegen",
+    "thema": "abstrakt",
+    "sprache": "DE",
+    "alter": 8,
+    "kommunikationslevel": 1
+  },
+  "Belratti": {
+    "spielerzahl": [
+      2,
+      7
+    ],
+    "spielmodi": "kooperativ",
+    "spieldauer": 30,
+    "spielziel": "Highscore",
+    "spielmechanik": "Kartenspiel,Deduktion",
+    "thema": "Kunstgalerie,abstrakt,Partyspiel",
+    "sprache": "DE",
+    "alter": 10,
+    "kommunikationslevel": 1
+  },
+  "Mysterium": {
+    "spielerzahl": [
+      2,
+      6
+    ],
+    "spielmodi": "kooperativ",
+    "spieldauer": 60,
+    "spielziel": "Aufgaben erfuellen",
+    "spielmechanik": "Deduktion",
+    "thema": "Mystisch,Partyspiel",
+    "sprache": "DE",
+    "alter": 12,
+    "kommunikationslevel": 0
+  },
+  "Dixit": {
+    "spielerzahl": [
+      3,
+      6
+    ],
+    "spielmodi": "kompetitiv",
+    "spieldauer": 30,
+    "spielziel": "Rennen",
+    "spielmechanik": "Deduktion,Storytelling,Rennen",
+    "thema": "Partyspiel,abstrakt",
+    "sprache": "DE",
+    "alter": 12,
+    "kommunikationslevel": 0
+  },
+  "Das aeltere Zeichen": {
+    "spielerzahl": [
+      1,
+      8
+    ],
+    "spielmodi": "Solo,kooperativ",
+    "spieldauer": 60,
+    "spielziel": "Boss besiegen,Aufgaben erfuellen",
+    "spielmechanik": "Encounter,Wuerfel und Karten,Kniffelmechanik",
+    "thema": "Lovecraft,Horror,Ermittler",
+    "sprache": "DE",
+    "alter": 14,
+    "kommunikationslevel": 4
+  }
+}

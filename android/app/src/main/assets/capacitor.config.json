@@ -1,0 +1,6 @@
+{
+	"appId": "com.brettspiel.app",
+	"appName": "brettspielapp",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

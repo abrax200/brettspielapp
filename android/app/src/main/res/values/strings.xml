@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">brettspielapp</string>
+    <string name="title_activity_main">brettspielapp</string>
+    <string name="package_name">com.brettspiel.app</string>
+    <string name="custom_url_scheme">com.brettspiel.app</string>
+</resources>

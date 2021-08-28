@@ -1,0 +1,109 @@
+:root{
+    --red:#ff2655;
+    --red2:#ff2692;
+    --background:rgb(30, 30, 30);
+    --shade1:rgb(40, 40, 40);
+    --shade2:rgb(50, 50, 50);
+    --shade3:rgb(60, 60, 60);
+    --border:rgb(70, 70, 70);
+    --radius:15px;
+    --searchbar-width:315px;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Regular.ttf);
+}
+
+.noselection{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+html, body, #root, .App {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.pagecontainer{
+    width: 100%;
+    overflow-y: scroll;
+    flex: 1 1 auto;
+}
+#root{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    margin: 0;
+    background-color: var(--background);
+}
+
+g>*{
+    transition: fill .2s;
+}
+
+/* Container für die Navigationsknöpfe */
+.tabs{
+    background-color: transparent;
+    width: 100%;
+    flex: 0 1 50px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content:space-around;
+}
+
+/* Navigationsknopf */
+.tabs_icon{
+    background-color: transparent;
+    border: none;
+    width: 33.333%;
+    height: 50px;
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Schneidet svg auf tatsächliche größe zu */
+.tabs_icon>div>svg{
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.tabs_icon:active{
+    transform:scale(.9, .9);
+    transition: transform .5s;
+}
+
+.tabs_icon:active>div>svg>g>*{
+    filter:drop-shadow(0 0 10px var(--red));
+    fill:var(--red);
+}
+
+.tabs_icon>div>svg>g>*{
+    fill:#999999;
+}
+
+p{
+    font-size: large;
+    line-height: 0px;
+    font-family: Roboto, sans-serif;
+    color:white;
+}
+
+h1{
+    font-size:large;
+    font-family: Roboto, sans-serif;
+    color:white;
+}
+
+.center{
+    text-align: center;
+}
