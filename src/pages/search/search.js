@@ -2,18 +2,40 @@ import React, {useState} from "react"
 import $ from "jquery"
 import "./search.css"
 import Dataset from "../../modules/dataset"
+import SelectList from "../../components/SelectList/SelectList.js"
 
 function SearchPage(){
     var [userInput, setUserInput] = useState("")
+    var [filterExpanded, setfilterExpanded] = useState(false)
+    var games = Dataset.startsWith(userInput)
+
     return(
         <>
+        {/* formular für suchleiste etc. */}
         <form onSubmit={handleSubmit} autoComplete="off" id="searchform">
-            <div className="searchbar_container">
+            {/* container für den container der Suchleiste und dem filterknopf, als auch den filter einstellungen */}
+            <div className="search_container">
+                {/* container der Suchleiste und dem filterknopf*/}
+                <div className="searchbar_container">
+                {/*suchleiste  */}
                 <input type="text" placeholder="Suche" spellCheck="false" id="searchform_input" className="searchbar"/>
+                {/* filterknopf */}
+                <button className="filter-button" onClick={() => {setfilterExpanded(!filterExpanded)}}>
+                    {/* svg zeugs */}
+                    <div>
+                        <svg fill="#fff">
+                            <g transform="scale(0.25)">
+                                <path
+                                d="M 42.00575,88.516113 30.40478,100 c 0,0 0,0 0,-11.483887 0,-4.40085 0,0 0,-4.40085 l 4.06526,-3.169895 c 1.35561,-1.057028 3.1671,-1.21903 4.38049,0 l 3.15522,3.169895 c 1.21339,1.219037 1.22232,3.190859 0,4.40085 z m 0.91004,-58.274304 v 55.539509 c 0,2.023878 -1.62179,3.653215 -3.6363,3.653215 h -5.2384 c -2.01451,0 -3.63631,-1.629337 -3.63631,-3.653215 V 30.241809 c 0,-2.023882 1.6218,-3.653217 3.63631,-3.653217 h 5.2384 c 2.01451,0 3.6363,1.629335 3.6363,3.653217 z M 3.666,0 h 65.988 c 2.03096,0 3.666,1.6426388 3.666,3.6830467 V 8.988774 c 0,2.040407 -1.63504,3.683046 -3.666,3.683046 H 3.666 C 1.635036,12.67182 0,11.029181 0,8.988774 V 3.6830467 C 0,1.6426388 1.635036,0 3.666,0 Z m 68.62156,6.7947201 c 1.37658,1.3829808 1.37659,3.6097329 0,4.9927159 l -33.14275,33.29687 c -1.37659,1.382982 -3.59304,1.382981 -4.96961,0 L 1.032438,11.787433 c -1.376582,-1.382983 -1.376582,-3.6097343 0,-4.9927173 71.255122,4.4e-6 0,0 71.255122,4.4e-6 z" />
+                            </g>
+                        </svg>
+                    </div>
+                </button>
+                </div>
+                <FilterForm expanded={filterExpanded}></FilterForm>
             </div>
         </form>
-        <GameContainer games={Dataset.startsWith(userInput)}></GameContainer>
-
+        <GameContainer games={games}></GameContainer>
         </>
     )
 
@@ -22,6 +44,92 @@ function SearchPage(){
         setUserInput($("#searchform_input").val())
         $("#searchform_input").trigger("blur")
     }
+
+}
+
+// Formular für filter und so
+function FilterForm(props){
+    // besorgt jeweil min max und State für den slider
+    var time_min = Dataset.getAllValues("spieldauer")[0]
+    var time_max = Dataset.getAllValues("spieldauer").pop()
+    const [time, setTime] = useState(time_min)
+
+    // hier wird 999 representativ für "kein limit" hinausgefiltert
+    var pCount_possibilities = Dataset.getAllValues("spielerzahl").filter(item => item !== 999)
+    var pCount_min = pCount_possibilities[0]
+    var pCount_max = pCount_possibilities.pop()
+    const [pCount, setPCount] = useState(pCount_min)
+
+    var age_possibilities = Dataset.getAllValues("alter")
+    console.log(age_possibilities)
+    var age_min = age_possibilities[0]
+    var age_max = age_possibilities.pop()
+    const [age, setAge] = useState(age_min)
+
+    return(
+        <>
+        {/* container für filter */}
+        {/* das ist btw eine abkürzung für if, else (genannt ternary-operator), nices teil */}
+        <div
+            className="filter_container"
+            style={(props.expanded) ? {display:"block"} : {display:"none"}}>
+            
+            <hr/>
+
+            <p>Spielerzahl: {pCount}+</p>
+            <input 
+                className="slider" 
+                type="range" 
+                min={pCount_min} 
+                max={pCount_max} 
+                step="1" 
+                defaultValue={pCount_min} 
+                onChange={ (e) => setPCount(e.target.value) }/>
+
+                <br/><br/>
+            
+            <p>Spielmodi</p>
+            <SelectList items={Dataset.getAllOfCriteria("spielmodi")}></SelectList>
+
+            <p>Spieldauer: {time} min</p>
+            <input 
+                className="slider" 
+                type="range" 
+                min={time_min} 
+                max={time_max} 
+                step="15" 
+                defaultValue={time_min} 
+                onChange={ (e) => setTime(e.target.value) }/>
+            <br/><br/>
+            
+            <p>Spielmechanik</p>
+            <SelectList items={Dataset.getAllOfCriteria("spielmechanik")}></SelectList>
+
+            <p>Thema</p>
+            <SelectList items={Dataset.getAllOfCriteria("thema")}></SelectList>
+
+            <p>Sprache</p>
+            <SelectList items={Dataset.getAllOfCriteria("sprache")}></SelectList>
+
+            <p>Alter: {age}+</p>
+            <input 
+                className="slider" 
+                type="range" min={age_min} 
+                max={age_max} step="1"
+                defaultValue={age_min} 
+                onChange={ (e) => setAge(e.target.value) }/>
+            <br/><br/>
+
+            <p>Kommunikation</p>
+            <SelectList items={[
+                "stark eingeschränkt", 
+                "eingeschränkt", 
+                "leicht eingeschränkt",
+                "hoch", 
+                "sehr hoch"]}/>
+        </div>
+        </>
+    )
 }
 
 function GameContainer(props){
@@ -36,31 +144,24 @@ function GameContainer(props){
 function GameCard(props){
     var g = Dataset.game(props.name)
 
-    var kommunikationslevel = ["stark eingeschränkt", "eingeschränkt", "leicht eingeschränkt", "hoch", "sehr hoch"]
-
     return(
         <div className="gamecard">
             <h1 className="center">{props.name}</h1>
             <table>
                 <tr>
-                    <td>Thema:</td>
-                    <td>{g.thema}</td>
+                    <td>Thema:</td>         <td>{g.thema}</td>
                 </tr>
                 <tr>
-                    <td>Alter:</td>
-                    <td>{g.alter}</td>
+                    <td>Alter:</td>         <td>{g.alter}</td>
                 </tr>
                 <tr>
-                    <td>Sprache:</td>
-                    <td>{g.sprache}</td>
+                    <td>Sprache:</td>       <td>{g.sprache}</td>
                 </tr>
                 <tr>
-                    <td>Spieldauer:</td>
-                    <td>{g.time}</td>
+                    <td>Spieldauer:</td>    <td>{g.time}</td>
                 </tr>
                 <tr>
-                    <td>Kommunikation:</td>
-                    <td>{kommunikationslevel[g.kommunikationslevel]}</td>
+                    <td>Kommunikation:</td> <td>{g.kommunikationslevel}</td>
                 </tr>
             </table>
         </div>

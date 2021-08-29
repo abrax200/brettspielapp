@@ -14,7 +14,7 @@ export default class SelectList extends React.Component{
     //sagt react was angezeigt werden soll
     render(){
         //erstmal nur ein Button, zum leeren der Auswahl
-        var html = <button className="clear" onClick={this.clearSelection}>&#10006;</button>
+        var html = <button className="clear" onClick={this.clearSelection}>╳</button>
         
         //fügt einzelne Items hinzu
         for (var item of this.props.items){

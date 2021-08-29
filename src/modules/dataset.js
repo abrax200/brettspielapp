@@ -8,14 +8,7 @@ class dataset{
     }
 
     get games(){
-        console.log(Object.keys(this.collection))
         return Object.keys(this.collection)
-    }
-
-    getall(key){
-        for (var i of this.games){
-            console.log(this.collection[i])
-        }
     }
 
     game(name){
@@ -30,6 +23,42 @@ class dataset{
                 thema: "Helden, Comic"
             }
         )
+    }
+
+    getAllOfCriteria(criteria){
+        var possibilities = []
+
+        for (var i of Object.values(this.collection)){
+            var value = i[criteria]
+            if (value !== undefined){
+                possibilities.push(...value.toString().split(","))
+            }
+        }
+
+        possibilities = [...new Set(possibilities.sort())] //entfernt alle duplikate
+
+        return possibilities
+    }
+
+    getAllValues(criteria){
+        var possibilities = []
+
+        for (var i of Object.values(this.collection)){
+            var value = i[criteria]
+            if (value !== undefined){
+                if(Array.isArray(value)){
+                    possibilities.push(...value)
+                } else{
+                    possibilities.push(value)
+                }
+            }
+        }
+
+        possibilities = [...new Set(possibilities.sort((a, b) => a - b))] //entfernt alle duplikate
+
+        console.log(possibilities)
+
+        return possibilities
     }
 
     startsWith(str){

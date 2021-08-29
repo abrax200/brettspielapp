@@ -11,7 +11,7 @@
     "thema": "Lebensmittel,Berufsleben,Realitaet",
     "sprache": "DE",
     "alter": 10,
-    "kommunikationslevel": 4
+    "kommunikationslevel": "sehr hoch"
   },
   "Legenden von Andor": {
     "spielerzahl": [
@@ -25,7 +25,7 @@
     "thema": "Helden,Fantasy",
     "sprache": "DE",
     "alter": 8,
-    "kommunikationslevel": 4
+    "kommunikationslevel": "sehr hoch"
   },
   "Marvel United": {
     "spielerzahl": [
@@ -35,11 +35,11 @@
     "spielmodi": "Solo,kooperativ",
     "spieldauer": 45,
     "spielziel": "Boss besiegen,Aufgaben erfuellen",
-    "spielmechanik": "Kartenspiel,Hand Management,Figuren bewegen",
+    "spielmechanik": "Kartenspiel,Handmanagement,Figuren bewegen",
     "thema": "Helden,Comic,Miniaturen",
-    "sprache": "DE/EN",
+    "sprache": "DE,EN",
     "alter": 8,
-    "kommunikationslevel": 3
+    "kommunikationslevel": "hoch"
   },
   "Harry Potter: Schlacht um Hogwarts": {
     "spielerzahl": [
@@ -53,7 +53,7 @@
     "thema": "Legacy,Kampagne,Fantasy",
     "sprache": "DE",
     "alter": 10,
-    "kommunikationslevel": 3
+    "kommunikationslevel": "hoch"
   },
   "Kneipenquiz": {
     "spielerzahl": [
@@ -67,7 +67,7 @@
     "thema": "Quiz,Fragen ohne Antwortmoeglichkeiten",
     "sprache": "DE",
     "alter": 12,
-    "kommunikationslevel": 4
+    "kommunikationslevel": "sehr hoch"
   },
   "Phantom the Card Game": {
     "spielerzahl": [
@@ -77,11 +77,11 @@
     "spielmodi": "Solo,kooperativ",
     "spieldauer": 45,
     "spielziel": "Aufgaben erfuellen",
-    "spielmechanik": "Deckbuilder,Hand Management",
+    "spielmechanik": "Deckbuilder,Handmanagement",
     "thema": "Helden,Comic",
     "sprache": "EN",
     "alter": 10,
-    "kommunikationslevel": 2
+    "kommunikationslevel": "leicht eingeschränkt"
   },
   "The Game": {
     "spielerzahl": [
@@ -91,11 +91,11 @@
     "spielmodi": "Solo,kooperativ",
     "spieldauer": 15,
     "spielziel": "Aufgaben erfuellen",
-    "spielmechanik": "Kartenspiel,Hand Management,Anlegen",
+    "spielmechanik": "Kartenspiel,Handmanagement,Anlegen",
     "thema": "abstrakt",
     "sprache": "DE",
     "alter": 8,
-    "kommunikationslevel": 1
+    "kommunikationslevel": "eingeschränkt"
   },
   "Belratti": {
     "spielerzahl": [
@@ -109,7 +109,7 @@
     "thema": "Kunstgalerie,abstrakt,Partyspiel",
     "sprache": "DE",
     "alter": 10,
-    "kommunikationslevel": 1
+    "kommunikationslevel": "eingeschränkt"
   },
   "Mysterium": {
     "spielerzahl": [
@@ -123,7 +123,7 @@
     "thema": "Mystisch,Partyspiel",
     "sprache": "DE",
     "alter": 12,
-    "kommunikationslevel": 0
+    "kommunikationslevel": "stark eingeschränkt"
   },
   "Dixit": {
     "spielerzahl": [
@@ -137,7 +137,7 @@
     "thema": "Partyspiel,abstrakt",
     "sprache": "DE",
     "alter": 12,
-    "kommunikationslevel": 0
+    "kommunikationslevel": "stark eingeschränkt"
   },
   "Das aeltere Zeichen": {
     "spielerzahl": [
@@ -151,6 +151,6 @@
     "thema": "Lovecraft,Horror,Ermittler",
     "sprache": "DE",
     "alter": 14,
-    "kommunikationslevel": 4
+    "kommunikationslevel": "sehr hoch"
   }
 }

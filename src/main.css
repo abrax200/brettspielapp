@@ -1,13 +1,27 @@
 :root{
     --red:#ff2655;
     --red2:#ff2692;
+    /* --red:#00ffd5;
+    --red2:#0077ff; */
     --background:rgb(30, 30, 30);
     --shade1:rgb(40, 40, 40);
     --shade2:rgb(50, 50, 50);
     --shade3:rgb(60, 60, 60);
     --border:rgb(70, 70, 70);
-    --radius:15px;
+    --font-color:white;
+    --icon-color:#999999;
+    --radius:20px;
     --searchbar-width:315px;
+}
+
+:root.light{
+    --background:rgb(230, 230, 230);
+    --shade1:rgb(40, 40, 40);
+    --shade2:rgb(255, 255, 255);
+    --shade3:rgb(230, 230, 230);
+    --border:rgb(220, 220, 220);
+    --font-color:rgb(0, 0, 0);
+    --icon-color:#999999;
 }
 
 @font-face {
@@ -50,7 +64,7 @@ g>*{
 
 /* Container für die Navigationsknöpfe */
 .tabs{
-    background-color: transparent;
+    background-color: var(--shade2);
     width: 100%;
     flex: 0 1 50px;
     border-top: 1px solid var(--border);
@@ -88,22 +102,50 @@ g>*{
 }
 
 .tabs_icon>div>svg>g>*{
-    fill:#999999;
+    fill:var(--icon-color);
 }
 
 p{
-    font-size: large;
+    font-size: 16px;
     line-height: 0px;
     font-family: Roboto, sans-serif;
-    color:white;
+    color:var(--font-color);
 }
 
 h1{
     font-size:large;
     font-family: Roboto, sans-serif;
-    color:white;
+    color:var(--font-color);
 }
 
 .center{
     text-align: center;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    margin: 0;
+    background-color: var(--border);
+}
+
+.slider{
+    -webkit-appearance: none;
+    position: relative;
+    background-image: linear-gradient(to right, var(--red), var(--red2));
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10000px;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    cursor:pointer;
+    border-radius: 100%;
+    box-shadow: 100vw 0 0 calc(100vw - 7.5px) var(--shade3);
 }

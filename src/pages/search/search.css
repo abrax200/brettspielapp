@@ -1,28 +1,71 @@
 .searchbar{
-    background-color: var(--shade2);
-    width: 100%;
-    padding: 0 15px;
-    margin: 10px 15px;
-    height: 40px;
-    border-radius: 100000px;
-    border: 1px solid var(--border);
-    outline: none;
-    vertical-align: middle;
-    
     font-size:16px;
     font-family: Roboto, sans-serif;
-    color: white;
+    color: var(--font-color);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin: 0 15px;
+    flex: 1 1 auto;
+}
+
+.searchbar::-webkit-input-placeholder{
+    font-size:16px;
+    font-family: Roboto, sans-serif;
+    color: var(--icon-color);
+}
+
+.search_container{
+    background-color: var(--shade2);
+    margin: 10px 15px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
 }
 
 .searchbar_container{
     display: flex;
-    justify-content: center;
+    height: 40px;
 }
 
+.filter_container{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.filter-button{
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+}
+
+.filter-button>div>svg{
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.filter-button:active{
+    transform:scale(.9, .9);
+    transition: transform .5s;
+}
+
+.filter-button:active>div>svg>g>*{
+    filter:drop-shadow(0 0 10px var(--red));
+    fill:var(--red);
+}
+
+.filter-button>div>svg>g>*{
+    fill:var(--icon-color);
+}
 
 .gamecard>table>tr>td{
     font-family: Roboto, sans-serif;
-    color: white;
+    color: var(--font-color);
     font-size: large;
     border: none;
 }
@@ -30,7 +73,7 @@
 .gamecard>table{
     font-family: Roboto, sans-serif;
     width: 100%;
-    color: white;
+    color: var(--font-color);
     font-size: large;
 }
 
@@ -40,9 +83,4 @@
     border-radius: var(--radius);
     padding: 0 15px 10px 15px;
     margin: 10px 15px;
-}
-
-.sociallevel{
-    border-radius: 3px;
-    padding: 1px 5px;
 }

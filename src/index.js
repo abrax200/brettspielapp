@@ -15,7 +15,6 @@ function PagesContainer(){
 
 	//Variable page specihert die aktuelle Seite
 	var [page, setPage] = useState(pages[1])
-	console.log(page)
 
 	return(
 		<>
