@@ -18,14 +18,17 @@ body{
     position: relative;
     margin-bottom: 10px;
     margin-top: 5px;
-    margin-right: -7.5px;
-    margin-left: -7.5px;
+    margin-right: 5px;
+    margin-left: 5px;
   
     cursor:pointer;
   }
   
   .selection_main input{
     visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0;
   }
   
   /*die Checkbox für Kategorie etc.*/
@@ -59,6 +62,7 @@ body{
   .selection_main input:checked ~ .selection_tagmark {
     background-image: linear-gradient(-45deg, var(--red2), var(--red));
     box-shadow: 0px 0px 5.14px var(--red2);
+    border: 1px solid transparent;
   }
   
   /* Kreuz für auswahl zurücksetzen */

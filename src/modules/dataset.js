@@ -15,12 +15,12 @@ class dataset{
         var g = this.collection[name]
         return(
             {
-                playercount:`${g.spielerzahl[0]}-${g.spielerzahl[1]}`,
-                time:`min. ${g.spieldauer} min`,
-                alter:`${g.alter}+`,
-                sprache:g.sprache,
-                kommunikationslevel:g.kommunikationslevel,
-                thema: "Helden, Comic"
+                playercount:`${g.playercount[0]}-${g.playercount[1]}`,
+                time:`min. ${g.time} min`,
+                age:`${g.age}+`,
+                language:g.language,
+                communication:g.communication,
+                theme: "Helden, Comic"
             }
         )
     }
@@ -56,20 +56,33 @@ class dataset{
 
         possibilities = [...new Set(possibilities.sort((a, b) => a - b))] //entfernt alle duplikate
 
-        console.log(possibilities)
-
         return possibilities
+    }
+
+    getMinMax(criteria){
+        var possibilities = this.getAllValues(criteria).filter(item => item !== "Infinity")
+        return [possibilities[0], possibilities.pop()]
     }
 
     startsWith(str){
         var foundGames = []
 
-        for (var i of this.games){
+        for (var i in this.collection){
             if (i.toLowerCase().startsWith(str.toLowerCase()))
             {foundGames.push(i)}
         }
 
         return(foundGames)
+    }
+
+    hasCriterias(criterias){
+        var foundGames = [] 
+
+        for (var i in this.collection){
+            foundGames.push(i)
+        }
+
+        return foundGames
     }
 }
 

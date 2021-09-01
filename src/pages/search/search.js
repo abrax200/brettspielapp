@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import $ from "jquery"
 import "./search.css"
 import Dataset from "../../modules/dataset"
-import SelectList from "../../components/SelectList/SelectList.js"
+import FilterForm from "./filter"
 
 function SearchPage(){
     var [userInput, setUserInput] = useState("")
@@ -32,7 +32,7 @@ function SearchPage(){
                     </div>
                 </button>
                 </div>
-                <FilterForm expanded={filterExpanded}></FilterForm>
+                <FilterForm onChange={(e) => console.log(Dataset.hasCriterias(e.current.value))} expanded={filterExpanded}></FilterForm>
             </div>
         </form>
         <GameContainer games={games}></GameContainer>
@@ -45,91 +45,6 @@ function SearchPage(){
         $("#searchform_input").trigger("blur")
     }
 
-}
-
-// Formular für filter und so
-function FilterForm(props){
-    // besorgt jeweil min max und State für den slider
-    var time_min = Dataset.getAllValues("spieldauer")[0]
-    var time_max = Dataset.getAllValues("spieldauer").pop()
-    const [time, setTime] = useState(time_min)
-
-    // hier wird 999 representativ für "kein limit" hinausgefiltert
-    var pCount_possibilities = Dataset.getAllValues("spielerzahl").filter(item => item !== 999)
-    var pCount_min = pCount_possibilities[0]
-    var pCount_max = pCount_possibilities.pop()
-    const [pCount, setPCount] = useState(pCount_min)
-
-    var age_possibilities = Dataset.getAllValues("alter")
-    console.log(age_possibilities)
-    var age_min = age_possibilities[0]
-    var age_max = age_possibilities.pop()
-    const [age, setAge] = useState(age_min)
-
-    return(
-        <>
-        {/* container für filter */}
-        {/* das ist btw eine abkürzung für if, else (genannt ternary-operator), nices teil */}
-        <div
-            className="filter_container"
-            style={(props.expanded) ? {display:"block"} : {display:"none"}}>
-            
-            <hr/>
-
-            <p>Spielerzahl: {pCount}+</p>
-            <input 
-                className="slider" 
-                type="range" 
-                min={pCount_min} 
-                max={pCount_max} 
-                step="1" 
-                defaultValue={pCount_min} 
-                onChange={ (e) => setPCount(e.target.value) }/>
-
-                <br/><br/>
-            
-            <p>Spielmodi</p>
-            <SelectList items={Dataset.getAllOfCriteria("spielmodi")}></SelectList>
-
-            <p>Spieldauer: {time} min</p>
-            <input 
-                className="slider" 
-                type="range" 
-                min={time_min} 
-                max={time_max} 
-                step="15" 
-                defaultValue={time_min} 
-                onChange={ (e) => setTime(e.target.value) }/>
-            <br/><br/>
-            
-            <p>Spielmechanik</p>
-            <SelectList items={Dataset.getAllOfCriteria("spielmechanik")}></SelectList>
-
-            <p>Thema</p>
-            <SelectList items={Dataset.getAllOfCriteria("thema")}></SelectList>
-
-            <p>Sprache</p>
-            <SelectList items={Dataset.getAllOfCriteria("sprache")}></SelectList>
-
-            <p>Alter: {age}+</p>
-            <input 
-                className="slider" 
-                type="range" min={age_min} 
-                max={age_max} step="1"
-                defaultValue={age_min} 
-                onChange={ (e) => setAge(e.target.value) }/>
-            <br/><br/>
-
-            <p>Kommunikation</p>
-            <SelectList items={[
-                "stark eingeschränkt", 
-                "eingeschränkt", 
-                "leicht eingeschränkt",
-                "hoch", 
-                "sehr hoch"]}/>
-        </div>
-        </>
-    )
 }
 
 function GameContainer(props){
@@ -148,21 +63,27 @@ function GameCard(props){
         <div className="gamecard">
             <h1 className="center">{props.name}</h1>
             <table>
-                <tr>
-                    <td>Thema:</td>         <td>{g.thema}</td>
-                </tr>
-                <tr>
-                    <td>Alter:</td>         <td>{g.alter}</td>
-                </tr>
-                <tr>
-                    <td>Sprache:</td>       <td>{g.sprache}</td>
-                </tr>
-                <tr>
-                    <td>Spieldauer:</td>    <td>{g.time}</td>
-                </tr>
-                <tr>
-                    <td>Kommunikation:</td> <td>{g.kommunikationslevel}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>Thema:</td>
+                        <td>{g.theme}</td>
+                    </tr>
+                    <tr>
+                        <td>Alter:</td>
+                        <td>{g.age}</td>
+                    </tr>
+                    <tr>
+                        <td>Sprache:</td>
+                        <td>{g.language}</td>
+                    </tr>
+                    <tr>
+                        <td>Spieldauer:</td><td>{g.time}</td>
+                    </tr>
+                    <tr>
+                        <td>Kommunikation:</td>
+                        <td>{g.communication}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     )

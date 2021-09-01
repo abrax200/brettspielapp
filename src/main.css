@@ -1,8 +1,6 @@
 :root{
     --red:#ff2655;
     --red2:#ff2692;
-    /* --red:#00ffd5;
-    --red2:#0077ff; */
     --background:rgb(30, 30, 30);
     --shade1:rgb(40, 40, 40);
     --shade2:rgb(50, 50, 50);
@@ -14,15 +12,19 @@
     --searchbar-width:315px;
 }
 
-:root.light{
-    --background:rgb(230, 230, 230);
-    --shade1:rgb(40, 40, 40);
-    --shade2:rgb(255, 255, 255);
-    --shade3:rgb(230, 230, 230);
-    --border:rgb(220, 220, 220);
-    --font-color:rgb(0, 0, 0);
-    --icon-color:#999999;
-}
+/* @media (prefers-color-scheme: dark){
+    :root{
+        --red:#00ffd5;
+        --red2:#0077ff;
+        --background:rgb(230, 230, 230);
+        --shade1:rgb(40, 40, 40);
+        --shade2:rgb(255, 255, 255);
+        --shade3:rgb(230, 230, 230);
+        --border:rgb(220, 220, 220);
+        --font-color:rgb(0, 0, 0);
+        --icon-color:#999999;
+    }
+} */
 
 @font-face {
     font-family: Roboto;
@@ -93,7 +95,7 @@ g>*{
 
 .tabs_icon:active{
     transform:scale(.9, .9);
-    transition: transform .5s;
+    transition: transform .25s;
 }
 
 .tabs_icon:active>div>svg>g>*{

@@ -7,13 +7,15 @@ import "./SelectList.css"
 export default class SelectList extends React.Component{
     constructor(props){
         super(props)
-        this.selected = []
+        this.selected = props.selected
         this.container = React.createRef()
+        this.onChange = props.onChange
     }
 
     //sagt react was angezeigt werden soll
     render(){
         //erstmal nur ein Button, zum leeren der Auswahl
+        this.selected = this.props.selected
         var html = <button className="clear" onClick={this.clearSelection}>╳</button>
         
         //fügt einzelne Items hinzu
@@ -21,9 +23,13 @@ export default class SelectList extends React.Component{
             //das ist JSX btw also HTML in Javascript.
             //Aufpassen, da dinge wie class hier className oder anders heißen.
             //Falls du nicht weißt was ID z.B. ist einfach GOOGLE fragen
+
             var boxsample = 
             <label className="selection_main">
-                <input type="checkbox"/>
+                <input
+                checked={this.selected.includes(item)}
+                onChange={() => {return(false)}}
+                type="checkbox"/>
                 <span className="selection_tagmark">
                     {item}
                 </span>
@@ -35,7 +41,7 @@ export default class SelectList extends React.Component{
         }
 
         return(
-            <div ref={this.container} className="selection_container noselection" onChange={this.getSelectedItems}>
+            <div id="container" ref={this.container} className="selection_container noselection" onChange={this.getSelectedItems}>
                 {html}
             </div>
         )
@@ -43,7 +49,7 @@ export default class SelectList extends React.Component{
     }
 
     
-    getSelectedItems = () => {
+    getSelectedItems = (e) => {
         this.selected = []
         for (var i of this.container.current.childNodes){
             if (i.tagName === "LABEL"){
@@ -51,6 +57,9 @@ export default class SelectList extends React.Component{
                     this.selected.push(i.childNodes[1].innerText)
                 }
             }
+        }
+        if (this.onChange !== undefined){
+            this.onChange({current:{value:this.selected}})
         }
     }
 

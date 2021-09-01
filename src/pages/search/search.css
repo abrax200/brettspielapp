@@ -84,3 +84,28 @@
     padding: 0 15px 10px 15px;
     margin: 10px 15px;
 }
+
+.filter_buttons_container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.filter_buttons_container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.filter_buttons_container>button{
+    margin: 0;
+    background:linear-gradient(to right, var(--red), var(--red2));
+    border-radius: 100vh;
+    border: none;
+    padding: 0 12.5px;
+    transition: box-shadow 0.25s;
+}
+
+.filter_buttons_container>button:active{
+    box-shadow: 0 0 10px var(--red2);
+}
