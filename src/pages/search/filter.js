@@ -34,6 +34,7 @@ function FilterForm(props){
 
     // erstellt states für die SelectLists
     const [gamemodes, setGamemodes] = useState([])
+    const [goal, setGoal] = useState([])
     const [gamemechanics, setGamemechanics] = useState([])
     const [theme, setTheme] = useState([])
     const [language, setLanguage] = useState([])
@@ -84,6 +85,12 @@ function FilterForm(props){
                 step="15" 
                 onChange={ (e) => setTime(e.target.value) }/>
             <br/><br/>
+
+            <p>Ziel</p>
+            <SelectList 
+                items={Dataset.getAllOfCriteria("goal")}
+                selected={goal}
+                onChange={(e) => setGoal(e.current.value)}/>
             
             <p>Spielmechanik</p>
             <SelectList 
@@ -137,21 +144,7 @@ function FilterForm(props){
                     setAge(age_min)
                     setPCount(pCount_min)
                     setTime(time_min)
-                    
-                    if (props.onChange !== undefined){
-            props.onChange(
-                {current:{value:{
-                    playercount:Number(pCount),
-                    age:Number(age),
-                    time:Number(time),
-                    gamemodes:gamemodes,
-                    gamemechanics:gamemechanics,
-                    theme:theme,
-                    language:language,
-                    communication:communication,
-                }}}
-            )
-        }
+                    this.callOnChange()
                 }}>
                     <p>Filter löschen</p>
                 </button>

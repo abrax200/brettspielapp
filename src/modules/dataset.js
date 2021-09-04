@@ -75,6 +75,20 @@ class dataset{
         return(foundGames)
     }
 
+    matchesChoice(game, criteria, val) {
+        var valueOfCriteria = this.collection[game][criteria]
+        
+        switch (criteria){
+            case "playercount":
+                return(val >= valueOfCriteria[0] && val <= valueOfCriteria[1])
+            case "age":
+                return(val >= valueOfCriteria)
+            
+            case "time":
+                return(val === valueOfCriteria)
+        }
+    }
+
     hasCriterias(criterias){
         var foundGames = [] 
 
@@ -82,7 +96,7 @@ class dataset{
             foundGames.push(i)
         }
 
-        return foundGames
+        return criterias
     }
 }
 
