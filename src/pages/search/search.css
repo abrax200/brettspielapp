@@ -5,8 +5,15 @@
     outline: none;
     border: none;
     background-color: transparent;
+    width: 100%;
+}
+
+.searchbar_form{
     margin: 0 15px;
     flex: 1 1 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .searchbar::-webkit-input-placeholder{
@@ -24,6 +31,9 @@
 
 .searchbar_container{
     display: flex;
+    width: fit-content;
+    margin: 0;
+    width: 100%;
     height: 40px;
 }
 
@@ -102,7 +112,10 @@
     background:linear-gradient(to right, var(--red), var(--red2));
     border-radius: 100vh;
     border: none;
-    padding: 0 12.5px;
+    padding: 5px 12.5px;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
     transition: box-shadow 0.25s;
 }
 

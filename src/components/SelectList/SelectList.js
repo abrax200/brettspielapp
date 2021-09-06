@@ -45,7 +45,6 @@ export default class SelectList extends React.Component{
                 {html}
             </div>
         )
-
     }
 
     

@@ -1,0 +1,15 @@
+{
+    "handle":{
+        "backgroundColor":"transparent",
+        "appearance":"none",
+        "border":"none",
+        "boxShadow":"none",
+        "height":"15px",
+        "width":"15px"},
+    "rail":{
+        "height":"15px",
+        "backgroundColor":"var(--shade3)"},
+    "track":{
+        "height":"15px",
+        "backgroundImage":"linear-gradient(to right, var(--red), var(--red2))"}
+}

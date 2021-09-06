@@ -1,9 +1,9 @@
 // import { Filesystem, Directory, Encoding } from '@capacitor/filesystem'
 //bin aktuell zu faul die datei tatsächlich einzulesen
-import collection from "./data.json"
+import Collection from "./data.json"
 
 class dataset{
-    constructor(){
+    constructor(collection){
         this.collection = collection
     }
 
@@ -15,10 +15,10 @@ class dataset{
         var g = this.collection[name]
         return(
             {
-                playercount:`${g.playercount[0]}-${g.playercount[1]}`,
+                playercount:`${g.playercount[0]}-${g.playercount[1]}`.replace("Infinity", "unbegrenzt"),
                 time:`min. ${g.time} min`,
                 age:`${g.age}+`,
-                language:g.language,
+                language:`${g.language}`.replace(",", "/"),
                 communication:g.communication,
                 theme: "Helden, Comic"
             }
@@ -31,7 +31,7 @@ class dataset{
         for (var i of Object.values(this.collection)){
             var value = i[criteria]
             if (value !== undefined){
-                possibilities.push(...value.toString().split(","))
+                possibilities.push(...value)
             }
         }
 
@@ -75,29 +75,45 @@ class dataset{
         return(foundGames)
     }
 
-    matchesChoice(game, criteria, val) {
-        var valueOfCriteria = this.collection[game][criteria]
-        
-        switch (criteria){
+    matchesCriteria(game, criteria, val){
+        var valueOfCriteria = game[criteria]
+
+        switch(criteria){
             case "playercount":
-                return(val >= valueOfCriteria[0] && val <= valueOfCriteria[1])
+                return(val >= valueOfCriteria[0] && (valueOfCriteria[1] === "Infinity") ? true: val <= valueOfCriteria[1])
+            
             case "age":
                 return(val >= valueOfCriteria)
             
             case "time":
-                return(val === valueOfCriteria)
+                return(val[0] <= valueOfCriteria && val[1] >= valueOfCriteria)
+            
+            case "communication":
+                return(val.includes(valueOfCriteria) || val.length === 0)
+
+
+            default:
+                return(val.every(str => valueOfCriteria.includes(str)) || val === [])
         }
     }
 
     hasCriterias(criterias){
         var foundGames = [] 
-
-        for (var i in this.collection){
-            foundGames.push(i)
+        for (var game in this.collection){
+            var bool = true
+            for (var criteria in criterias){
+                var val = criterias[criteria]
+                var matches = this.matchesCriteria(this.collection[game], criteria, val)
+                bool = bool && matches
+                // console.log(game, criteria, this.matchesCriteria(this.collection[game], criteria, val))
+            }
+            if(bool){
+                foundGames.push(game)
+            }
         }
 
-        return criterias
+        return foundGames
     }
 }
 
-export default new dataset()
+export default new dataset(Collection)

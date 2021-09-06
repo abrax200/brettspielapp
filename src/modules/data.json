@@ -1,156 +1,307 @@
 {
-  "Kitchen Rush": {
-    "spielerzahl": [
-      1,
-      4
-    ],
-    "spielmodi": "Solo,kooperativ",
-    "spieldauer": 15,
-    "spielziel": "Aufgaben erfuellen",
-    "spielmechanik": "Echtzeit,gleichzeitig spielen",
-    "thema": "Lebensmittel,Berufsleben,Realitaet",
-    "sprache": "DE",
-    "alter": 10,
-    "kommunikationslevel": "sehr hoch"
-  },
-  "Legenden von Andor": {
-    "spielerzahl": [
-      1,
-      6
-    ],
-    "spielmodi": "Solo,kooperativ",
-    "spieldauer": 90,
-    "spielziel": "Aufgaben erfuellen",
-    "spielmechanik": "gleichzeitig spielen,wuerfeln,Figuren bewegen",
-    "thema": "Helden,Fantasy",
-    "sprache": "DE",
-    "alter": 8,
-    "kommunikationslevel": "sehr hoch"
-  },
-  "Marvel United": {
-    "spielerzahl": [
-      1,
-      4
-    ],
-    "spielmodi": "Solo,kooperativ",
-    "spieldauer": 45,
-    "spielziel": "Boss besiegen,Aufgaben erfuellen",
-    "spielmechanik": "Kartenspiel,Handmanagement,Figuren bewegen",
-    "thema": "Helden,Comic,Miniaturen",
-    "sprache": "DE,EN",
-    "alter": 8,
-    "kommunikationslevel": "hoch"
-  },
-  "Harry Potter: Schlacht um Hogwarts": {
-    "spielerzahl": [
-      1,
-      4
-    ],
-    "spielmodi": "Solo,kooperativ",
-    "spieldauer": 60,
-    "spielziel": "Gegner besiegen",
-    "spielmechanik": "Deckbuilder",
-    "thema": "Legacy,Kampagne,Fantasy",
-    "sprache": "DE",
-    "alter": 10,
-    "kommunikationslevel": "hoch"
-  },
-  "Kneipenquiz": {
-    "spielerzahl": [
-      1,
-      999
-    ],
-    "spielmodi": "Solo,kooperativ",
-    "spieldauer": 45,
-    "spielziel": "KI Gegner besiegen,Rennen",
-    "spielmechanik": "Quiz,Rennen",
-    "thema": "Quiz,Fragen ohne Antwortmoeglichkeiten",
-    "sprache": "DE",
-    "alter": 12,
-    "kommunikationslevel": "sehr hoch"
-  },
-  "Phantom the Card Game": {
-    "spielerzahl": [
-      1,
-      2
-    ],
-    "spielmodi": "Solo,kooperativ",
-    "spieldauer": 45,
-    "spielziel": "Aufgaben erfuellen",
-    "spielmechanik": "Deckbuilder,Handmanagement",
-    "thema": "Helden,Comic",
-    "sprache": "EN",
-    "alter": 10,
-    "kommunikationslevel": "leicht eingeschraenkt"
-  },
-  "The Game": {
-    "spielerzahl": [
-      1,
-      5
-    ],
-    "spielmodi": "Solo,kooperativ",
-    "spieldauer": 15,
-    "spielziel": "Aufgaben erfuellen",
-    "spielmechanik": "Kartenspiel,Handmanagement,Anlegen",
-    "thema": "abstrakt",
-    "sprache": "DE",
-    "alter": 8,
-    "kommunikationslevel": "eingeschraenkt"
-  },
-  "Belratti": {
-    "spielerzahl": [
-      2,
-      7
-    ],
-    "spielmodi": "kooperativ",
-    "spieldauer": 30,
-    "spielziel": "Highscore",
-    "spielmechanik": "Kartenspiel,Deduktion",
-    "thema": "Kunstgalerie,abstrakt,Partyspiel",
-    "sprache": "DE",
-    "alter": 10,
-    "kommunikationslevel": "eingeschraenkt"
-  },
-  "Mysterium": {
-    "spielerzahl": [
-      2,
-      6
-    ],
-    "spielmodi": "kooperativ",
-    "spieldauer": 60,
-    "spielziel": "Aufgaben erfuellen",
-    "spielmechanik": "Deduktion",
-    "thema": "Mystisch,Partyspiel",
-    "sprache": "DE",
-    "alter": 12,
-    "kommunikationslevel": "stark eingeschraenkt"
-  },
-  "Dixit": {
-    "spielerzahl": [
-      3,
-      6
-    ],
-    "spielmodi": "kompetitiv",
-    "spieldauer": 30,
-    "spielziel": "Rennen",
-    "spielmechanik": "Deduktion,Storytelling,Rennen",
-    "thema": "Partyspiel,abstrakt",
-    "sprache": "DE",
-    "alter": 12,
-    "kommunikationslevel": "stark eingeschraenkt"
-  },
-  "Das aeltere Zeichen": {
-    "spielerzahl": [
-      1,
-      8
-    ],
-    "spielmodi": "Solo,kooperativ",
-    "spieldauer": 60,
-    "spielziel": "Boss besiegen,Aufgaben erfuellen",
-    "spielmechanik": "Encounter,Wuerfel und Karten,Kniffelmechanik",
-    "thema": "Lovecraft,Horror,Ermittler",
-    "sprache": "DE",
-    "alter": 14,
-    "kommunikationslevel": "sehr hoch"
-  }
+    "Kitchen Rush": {
+        "playercount": [
+            1,
+            4
+        ],
+        "gamemodes": [
+            "Solo",
+            "kooperativ"
+        ],
+        "time": 15,
+        "goal": [
+            "Aufgaben erfuellen"
+        ],
+        "gamemechanics": [
+            "Echtzeit",
+            "gleichzeitig spielen"
+        ],
+        "theme": [
+            "Lebensmittel",
+            "Berufsleben",
+            "Realitaet"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 10,
+        "communication": "sehr hoch"
+    },
+    "Legenden von Andor": {
+        "playercount": [
+            1,
+            6
+        ],
+        "gamemodes": [
+            "Solo",
+            "kooperativ"
+        ],
+        "time": 90,
+        "goal": [
+            "Aufgaben erfuellen"
+        ],
+        "gamemechanics": [
+            "gleichzeitig spielen",
+            "wuerfeln",
+            "Figuren bewegen"
+        ],
+        "theme": [
+            "Helden",
+            "Fantasy"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 8,
+        "communication": "sehr hoch"
+    },
+    "Marvel United": {
+        "playercount": [
+            1,
+            4
+        ],
+        "gamemodes": [
+            "Solo",
+            "kooperativ"
+        ],
+        "time": 45,
+        "goal": [
+            "Boss besiegen",
+            "Aufgaben erfuellen"
+        ],
+        "gamemechanics": [
+            "Kartenspiel",
+            "Handmanagement",
+            "Figuren bewegen"
+        ],
+        "theme": [
+            "Helden",
+            "Comic",
+            "Miniaturen"
+        ],
+        "language": [
+            "DE",
+            "EN"
+        ],
+        "age": 8,
+        "communication": "hoch"
+    },
+    "Harry Potter: Schlacht um Hogwarts": {
+        "playercount": [
+            1,
+            4
+        ],
+        "gamemodes": [
+            "Solo",
+            "kooperativ"
+        ],
+        "time": 60,
+        "goal": [
+            "Gegner besiegen"
+        ],
+        "gamemechanics": [
+            "Deckbuilder"
+        ],
+        "theme": [
+            "Legacy",
+            "Kampagne",
+            "Fantasy"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 10,
+        "communication": "hoch"
+    },
+    "Kneipenquiz": {
+        "playercount": [
+            1,
+            "Infinity"
+        ],
+        "gamemodes": [
+            "Solo",
+            "kooperativ"
+        ],
+        "time": 45,
+        "goal": [
+            "KI Gegner besiegen",
+            "Rennen"
+        ],
+        "gamemechanics": [
+            "Quiz",
+            "Rennen"
+        ],
+        "theme": [
+            "Quiz",
+            "Fragen ohne Antwortmoeglichkeiten"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 12,
+        "communication": "sehr hoch"
+    },
+    "Phantom the Card Game": {
+        "playercount": [
+            1,
+            2
+        ],
+        "gamemodes": [
+            "Solo",
+            "kooperativ"
+        ],
+        "time": 45,
+        "goal": [
+            "Aufgaben erfuellen"
+        ],
+        "gamemechanics": [
+            "Deckbuilder",
+            "Handmanagement"
+        ],
+        "theme": [
+            "Helden",
+            "Comic"
+        ],
+        "language": [
+            "EN"
+        ],
+        "age": 10,
+        "communication": "leicht eingeschraenkt"
+    },
+    "The Game": {
+        "playercount": [
+            1,
+            5
+        ],
+        "gamemodes": [
+            "Solo",
+            "kooperativ"
+        ],
+        "time": 15,
+        "goal": [
+            "Aufgaben erfuellen"
+        ],
+        "gamemechanics": [
+            "Kartenspiel",
+            "Handmanagement",
+            "Anlegen"
+        ],
+        "theme": [
+            "abstrakt"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 8,
+        "communication": "eingeschraenkt"
+    },
+    "Belratti": {
+        "playercount": [
+            2,
+            7
+        ],
+        "gamemodes": [
+            "kooperativ"
+        ],
+        "time": 30,
+        "goal": [
+            "Highscore"
+        ],
+        "gamemechanics": [
+            "Kartenspiel",
+            "Deduktion"
+        ],
+        "theme": [
+            "Kunstgalerie",
+            "abstrakt",
+            "Partyspiel"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 10,
+        "communication": "eingeschraenkt"
+    },
+    "Mysterium": {
+        "playercount": [
+            2,
+            6
+        ],
+        "gamemodes": [
+            "kooperativ"
+        ],
+        "time": 60,
+        "goal": [
+            "Aufgaben erfuellen"
+        ],
+        "gamemechanics": [
+            "Deduktion"
+        ],
+        "theme": [
+            "Mystisch",
+            "Partyspiel"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 12,
+        "communication": "stark eingeschraenkt"
+    },
+    "Dixit": {
+        "playercount": [
+            3,
+            6
+        ],
+        "gamemodes": [
+            "kompetitiv"
+        ],
+        "time": 30,
+        "goal": [
+            "Rennen"
+        ],
+        "gamemechanics": [
+            "Deduktion",
+            "Storytelling",
+            "Rennen"
+        ],
+        "theme": [
+            "Partyspiel",
+            "abstrakt"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 12,
+        "communication": "stark eingeschraenkt"
+    },
+    "Das aeltere Zeichen": {
+        "playercount": [
+            1,
+            8
+        ],
+        "gamemodes": [
+            "Solo",
+            "kooperativ"
+        ],
+        "time": 60,
+        "goal": [
+            "Boss besiegen",
+            "Aufgaben erfuellen"
+        ],
+        "gamemechanics": [
+            "Encounter",
+            "Wuerfel und Karten",
+            "Kniffelmechanik"
+        ],
+        "theme": [
+            "Lovecraft",
+            "Horror",
+            "Ermittler"
+        ],
+        "language": [
+            "DE"
+        ],
+        "age": 14,
+        "communication": "sehr hoch"
+    }
 }

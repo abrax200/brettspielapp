@@ -1,6 +1,9 @@
 import Dataset from "../../modules/dataset"
 import SelectList from "../../components/SelectList/SelectList.js"
 import React, {useState, useEffect} from "react"
+import Slider, {Range} from "rc-slider"
+import 'rc-slider/assets/index.css';
+import sliderStyle from "./sliderstyles.json"
 // import $ from "jquery"
 
 // Formular für filter und so
@@ -10,21 +13,22 @@ function FilterForm(props){
         if (props.onChange !== undefined){
             props.onChange(
                 {current:{value:{
-                    playercount:Number(pCount),
-                    age:Number(age),
-                    time:Number(time),
+                    playercount:pCount,
+                    age:age,
+                    time:time,
                     gamemodes:gamemodes,
                     gamemechanics:gamemechanics,
                     theme:theme,
                     language:language,
                     communication:communication,
+                    goal:goal,
                 }}}
             )
         }
     }
 
     var [time_min, time_max] = Dataset.getMinMax("time")
-    const [time, setTime] = useState(time_min)
+    const [time, setTime] = useState([time_min, time_max])
 
     var [pCount_min, pCount_max] = Dataset.getMinMax("playercount")
     const [pCount, setPCount] = useState(pCount_min)
@@ -44,7 +48,7 @@ function FilterForm(props){
     useEffect(() => callOnChange(),
     // \/ brauch ich weil mir react sonst sagt das ich etwas brauche, was ich nicht brauche
     // eslint-disable-next-line
-    [time, pCount, age, gamemodes, gamemechanics, theme, language, communication])
+    [time, pCount, age, goal, gamemodes, gamemechanics, theme, language, communication])
 
     return(
         <>
@@ -59,15 +63,14 @@ function FilterForm(props){
             <hr/>
 
             <p>Spielerzahl: {pCount}+</p>
-            <input 
-                className="slider" 
-                type="range" 
+            <Slider
                 min={pCount_min} 
-                max={pCount_max} 
+                max={pCount_max}
                 value={pCount}
-                onChange={ (e) => setPCount(e.target.value) }/>
-
-                <br/><br/>
+                handleStyle={sliderStyle.handle}
+                railStyle={sliderStyle.rail}
+                trackStyle={sliderStyle.track}
+                onChange={ (value) => setPCount(value) }/><br/>
             
             <p>Spielmodi</p>
             <SelectList 
@@ -75,17 +78,18 @@ function FilterForm(props){
                 selected={gamemodes}
                 onChange={(e) => setGamemodes(e.current.value)}/>
 
-            <p>Spieldauer: {time} min</p>
-            <input 
-                className="slider" 
-                type="range" 
-                min={time_min} 
-                max={time_max} 
+            <p>Spieldauer: {time[0]}-{time[1]} min</p>
+            <Range
+                onChange={(value) => setTime(value)}
                 value={time}
-                step="15" 
-                onChange={ (e) => setTime(e.target.value) }/>
-            <br/><br/>
-
+                min={time_min}
+                max={time_max}
+                step={15}
+                handleStyle={[sliderStyle.handle, sliderStyle.handle]}
+                railStyle={sliderStyle.rail}
+                trackStyle={[sliderStyle.track]}
+                /><br/>
+            
             <p>Ziel</p>
             <SelectList 
                 items={Dataset.getAllOfCriteria("goal")}
@@ -111,21 +115,21 @@ function FilterForm(props){
                 onChange={(e) => setLanguage(e.current.value)}/>
 
             <p>Alter: {age}+</p>
-            <input 
-                className="slider" 
-                type="range"
+            <Slider
                 min={age_min} 
-                max={age_max} 
+                max={age_max}
                 step="1"
                 value={age}
-                onChange={ (e) => setAge(e.target.value) }/>
-            <br/><br/>
+                onChange={ (value) => setAge(value) }
+                handleStyle={[sliderStyle.handle, sliderStyle.handle]}
+                railStyle={sliderStyle.rail}
+                trackStyle={[sliderStyle.track]}/><br/>
 
             <p>Kommunikation</p>
             <SelectList items={[
-                "stark eingeschränkt", 
-                "eingeschränkt", 
-                "leicht eingeschränkt",
+                "stark eingeschraenkt", 
+                "eingeschraenkt", 
+                "leicht eingeschraenkt",
                 "hoch", 
                 "sehr hoch"]}
                 selected={communication}
@@ -133,21 +137,23 @@ function FilterForm(props){
             
             <div className="filter_buttons_container">
             <button onClick={callOnChange}>
-                    <p>Filter anwenden</p>
-                </button>
-                <button onClick={() => {
-                    setCommunication([])
-                    setGamemechanics([])
-                    setGamemodes([])
-                    setLanguage([])
-                    setTheme([])
-                    setAge(age_min)
-                    setPCount(pCount_min)
-                    setTime(time_min)
-                    this.callOnChange()
-                }}>
-                    <p>Filter löschen</p>
-                </button>
+                Filter anwenden
+            </button>
+            <button onClick={() => {
+                setCommunication([])
+                setGamemechanics([])
+                setGamemodes([])
+                setLanguage([])
+                setTheme([])
+                setAge(age_min)
+                setPCount(pCount_min)
+                setTime([time_min, time_max])
+                setGoal([])
+                
+                callOnChange()
+            }}>
+                Filter löschen
+            </button>
             </div>
         </div>
         </>
