@@ -136,7 +136,7 @@ function FilterForm(props){
                     setGamemodes([])
                     setLanguage([])
                     setTheme([])
-                    setAge(age_min)
+                    setAge(age_max)
                     setPCount(pCount_min)
                     setTime([time_min, time_max])
                     setGoal([])

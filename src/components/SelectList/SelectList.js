@@ -21,7 +21,7 @@ export default function SelectList(props){
         var boxsample = 
         <label className="selection_main">
             <input
-            checked={selected.includes(item)}
+            checked={props.selected.includes(item)}
             onChange={() => {return(false)}}
             type="checkbox"/>
             <span className="selection_tagmark">
