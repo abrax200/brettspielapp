@@ -5,9 +5,6 @@
 /.pnp
 .pnp.js
 
-#android
-/android
-
 # testing
 /coverage
 
@@ -15,6 +12,7 @@
 /build
 
 # misc
+android/
 .DS_Store
 .env.local
 .env.development.local
