@@ -27,6 +27,7 @@
     margin: 10px 15px;
     border-radius: var(--radius);
     border: 1px solid var(--border);
+    overflow: hidden;
 }
 
 .searchbar_container{
@@ -40,7 +41,6 @@
 .filter_container{
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 10px;
 }
 
 .filter-button{
@@ -88,7 +88,7 @@
 }
 
 .gamecard{
-    background-image: linear-gradient(-45deg, var(--red2), var(--red));
+    background: linear-gradient(to right, var(--red), var(--red2));
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 0 15px 10px 15px;

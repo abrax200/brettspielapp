@@ -12,14 +12,14 @@ class dataset{
     }
 
     game(name){
-        var g = this.collection[name]
+        const game = this.collection[name]
         return(
             {
-                playercount:`${g.playercount[0]}-${g.playercount[1]}`.replace("Infinity", "unbegrenzt"),
-                time:`min. ${g.time} min`,
-                age:`${g.age}+`,
-                language:`${g.language}`.replace(",", "/"),
-                communication:g.communication,
+                playercount:`${game.playercount[0]}-${game.playercount[1]}`.replace("Infinity", "unbegrenzt"),
+                time:`min. ${game.time} min`,
+                age:`${game.age}+`,
+                language:`${game.language}`.replace(",", "/"),
+                communication:game.communication,
                 theme: "Helden, Comic"
             }
         )
@@ -28,10 +28,14 @@ class dataset{
     getAllOfCriteria(criteria){
         var possibilities = []
 
-        for (var i of Object.values(this.collection)){
-            var value = i[criteria]
-            if (value !== undefined){
-                possibilities.push(...value)
+        for (const game of Object.values(this.collection)){
+            const ValueOfCriteria = game[criteria]
+            if (ValueOfCriteria !== undefined){
+                if(Array.isArray(ValueOfCriteria)){
+                    possibilities.push(...ValueOfCriteria)
+                } else{
+                    possibilities.push(ValueOfCriteria)
+                }
             }
         }
 
@@ -43,13 +47,13 @@ class dataset{
     getAllValues(criteria){
         var possibilities = []
 
-        for (var i of Object.values(this.collection)){
-            var value = i[criteria]
-            if (value !== undefined){
-                if(Array.isArray(value)){
-                    possibilities.push(...value)
+        for (const game of Object.values(this.collection)){
+            const ValueOfCriteria = game[criteria]
+            if (ValueOfCriteria !== undefined){
+                if(Array.isArray(ValueOfCriteria)){
+                    possibilities.push(...ValueOfCriteria)
                 } else{
-                    possibilities.push(value)
+                    possibilities.push(ValueOfCriteria)
                 }
             }
         }
@@ -80,6 +84,7 @@ class dataset{
 
         switch(criteria){
             case "playercount":
+                //Schaut ob der gewählte Wert in die Spielrzahl hineinpasst
                 return(val >= valueOfCriteria[0] && (valueOfCriteria[1] === "Infinity") ? true: val <= valueOfCriteria[1])
             
             case "age":
@@ -91,7 +96,6 @@ class dataset{
             case "communication":
                 return(val.includes(valueOfCriteria) || val.length === 0)
 
-
             default:
                 return(val.every(str => valueOfCriteria.includes(str)) || val === [])
         }
@@ -99,15 +103,16 @@ class dataset{
 
     hasCriterias(criterias){
         var foundGames = [] 
-        for (var game in this.collection){
-            var bool = true
-            for (var criteria in criterias){
-                var val = criterias[criteria]
-                var matches = this.matchesCriteria(this.collection[game], criteria, val)
-                bool = bool && matches
-                // console.log(game, criteria, this.matchesCriteria(this.collection[game], criteria, val))
+        for (const game in this.collection){
+            //Das ding stellt im wesentlichen sicher das alle Kriterien erfüllt sind
+            
+            var matchesAllCheckedCriterias = true
+            for (const criteria in criterias){
+                const val = criterias[criteria]
+                const matchesThisCriteria = this.matchesCriteria(this.collection[game], criteria, val)
+                matchesAllCheckedCriterias = matchesAllCheckedCriterias && matchesThisCriteria
             }
-            if(bool){
+            if(matchesAllCheckedCriterias){
                 foundGames.push(game)
             }
         }

@@ -152,4 +152,25 @@ hr{
     box-shadow: 100vw 0 0 calc(100vw - 7.5px) var(--shade3);
 }
 
+.color{
+    background-color: transparent;
+    border: none;
+    height: 100px;
+    width: 100px;
+}
+
+.color::-webkit-color-swatch{
+    border-radius: 10px;
+    border: none;
+}
+
+.color::-webkit-color-swatch-wrapper{
+    padding: none;
+}
+
+#gradient{
+    width: 100%;
+    height: 200px;
+}
+
 form{width: 0px; height: 0px;}

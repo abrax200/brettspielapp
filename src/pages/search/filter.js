@@ -4,7 +4,6 @@ import React, {useState, useEffect} from "react"
 import Slider, {Range} from "rc-slider"
 import 'rc-slider/assets/index.css';
 import sliderStyle from "./sliderstyles.json"
-// import $ from "jquery"
 
 // Formular für filter und so
 function FilterForm(props){
@@ -12,7 +11,7 @@ function FilterForm(props){
     function callOnChange(){
         if (props.onChange !== undefined){
             props.onChange(
-                {current:{value:{
+                {
                     playercount:pCount,
                     age:age,
                     time:time,
@@ -22,19 +21,19 @@ function FilterForm(props){
                     language:language,
                     communication:communication,
                     goal:goal,
-                }}}
+                }
             )
         }
     }
 
-    var [time_min, time_max] = Dataset.getMinMax("time")
+    const [time_min, time_max] = Dataset.getMinMax("time")
     const [time, setTime] = useState([time_min, time_max])
 
-    var [pCount_min, pCount_max] = Dataset.getMinMax("playercount")
+    const [pCount_min, pCount_max] = Dataset.getMinMax("playercount")
     const [pCount, setPCount] = useState(pCount_min)
 
-    var [age_min, age_max] = Dataset.getMinMax("age")
-    const [age, setAge] = useState(age_min)
+    const [age_min, age_max] = Dataset.getMinMax("age")
+    const [age, setAge] = useState(age_max)
 
     // erstellt states für die SelectLists
     const [gamemodes, setGamemodes] = useState([])
@@ -57,10 +56,8 @@ function FilterForm(props){
         <div
             className="filter_container noselection"
             style={
-                // das \/ ist btw eine abkürzung für if, else (genannt ternary-operator), nices teil
+                // das \/ ist btw eine abkürzung für if else, die ternary-operator genannt wird, nices teil
                 (props.expanded) ? {display:"block"} : {display:"none"}}>
-            
-            <hr/>
 
             <p>Spielerzahl: {pCount}+</p>
             <Slider
@@ -76,7 +73,7 @@ function FilterForm(props){
             <SelectList 
                 items={Dataset.getAllOfCriteria("gamemodes")}
                 selected={gamemodes}
-                onChange={(e) => setGamemodes(e.current.value)}/>
+                onChange={(value) => setGamemodes(value)}/>
 
             <p>Spieldauer: {time[0]}-{time[1]} min</p>
             <Range
@@ -87,32 +84,31 @@ function FilterForm(props){
                 step={15}
                 handleStyle={[sliderStyle.handle, sliderStyle.handle]}
                 railStyle={sliderStyle.rail}
-                trackStyle={[sliderStyle.track]}
-                /><br/>
+                trackStyle={[sliderStyle.track]}/><br/>
             
             <p>Ziel</p>
             <SelectList 
                 items={Dataset.getAllOfCriteria("goal")}
                 selected={goal}
-                onChange={(e) => setGoal(e.current.value)}/>
+                onChange={(value) => setGoal(value)}/>
             
             <p>Spielmechanik</p>
             <SelectList 
                 items={Dataset.getAllOfCriteria("gamemechanics")}
                 selected={gamemechanics}
-                onChange={(e) => setGamemechanics(e.current.value)}/>
+                onChange={(value) => setGamemechanics(value)}/>
 
             <p>Thema</p>
             <SelectList
                 items={Dataset.getAllOfCriteria("theme")}
                 selected={theme}
-                onChange={(e) => setTheme(e.current.value)}/>
+                onChange={(value) => setTheme(value)}/>
 
             <p>Sprache</p>
             <SelectList
                 items={Dataset.getAllOfCriteria("language")}
                 selected={language}
-                onChange={(e) => setLanguage(e.current.value)}/>
+                onChange={(value) => setLanguage(value)}/>
 
             <p>Alter: {age}+</p>
             <Slider
@@ -126,35 +122,31 @@ function FilterForm(props){
                 trackStyle={[sliderStyle.track]}/><br/>
 
             <p>Kommunikation</p>
-            <SelectList items={[
-                "stark eingeschraenkt", 
-                "eingeschraenkt", 
-                "leicht eingeschraenkt",
-                "hoch", 
-                "sehr hoch"]}
+            <SelectList items={Dataset.getAllOfCriteria("communication")}
                 selected={communication}
-                onChange={(e) => setCommunication(e.current.value)}/><br/><br/>
+                onChange={(value) => setCommunication(value)}/><br/><br/>
             
             <div className="filter_buttons_container">
-            <button onClick={callOnChange}>
-                Filter anwenden
-            </button>
-            <button onClick={() => {
-                setCommunication([])
-                setGamemechanics([])
-                setGamemodes([])
-                setLanguage([])
-                setTheme([])
-                setAge(age_min)
-                setPCount(pCount_min)
-                setTime([time_min, time_max])
-                setGoal([])
-                
-                callOnChange()
-            }}>
-                Filter löschen
-            </button>
+                <button onClick={callOnChange}>
+                    Filter anwenden
+                </button>
+                <button onClick={() => {
+                    setCommunication([])
+                    setGamemechanics([])
+                    setGamemodes([])
+                    setLanguage([])
+                    setTheme([])
+                    setAge(age_min)
+                    setPCount(pCount_min)
+                    setTime([time_min, time_max])
+                    setGoal([])
+                    
+                    callOnChange()}}>
+                    Filter löschen
+                </button>
             </div>
+            <br/>
+            <hr/>
         </div>
         </>
     )
