@@ -1,5 +1,6 @@
 import {useState} from "react"
 import $ from "jquery"
+import Dataset from "../../modules/dataset"
 
 function SettingsPage(){
     var [color1, setColor1] = useState("#ff2655")
@@ -20,6 +21,8 @@ function SettingsPage(){
             value={color2}
             onChange={(e) => {setColor2(e.target.value)}}/>
         <button onClick={() => {setColor1("#ff2655");setColor2("#ff2692")}}>RESET</button>
+        <button onClick={() => {Dataset.saveCollection()}}>Sammlung Speichern</button>
+        <button onClick={() => {Dataset.deleteCollection()}}>Sammlung Löschen</button>
         <div id="gradient">
         </div>
         </>

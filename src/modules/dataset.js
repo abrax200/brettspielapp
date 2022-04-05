@@ -8,20 +8,7 @@ class dataset{
         this.collection = collection
         this.onLoad = () => {}
         this.onDelete = () => {}
-        Filesystem.readFile({
-            path:"collection.json",
-            directory: Directory.Data,
-            encoding: Encoding.UTF8
-        })
-        .then(
-            (value) => {
-                this.collection = JSON.parse(value.data)
-                this.onLoad()
-            }
-        )
-        .catch(
-            (err) => console.error(err)
-        )
+        this.CheckForFile()
     }
 
     games(){
@@ -146,6 +133,19 @@ class dataset{
         
     }
 
+    async deleteCollection(){
+        Filesystem.deleteFile({
+            path: "collection.json",
+            directory: Directory.Data,
+        })
+        .then(
+            () => console.log("Succesfully delted file")
+        )
+        .catch(
+            (err) => console.error(err)
+        )
+    }
+
     async saveCollection(){
         Filesystem.writeFile({
             path: "collection.json",
@@ -163,8 +163,8 @@ class dataset{
 
     async deleteGame(name){
         delete this.collection[name]
-        this.onDelete()
         this.saveCollection()
+        this.onDelete()
     }
 
     addOnLoad(fun){
@@ -174,6 +174,52 @@ class dataset{
     addOnDelete(fun){
         this.onDelete = fun
     }
+
+    async CheckForFile() {
+        try {
+            let ret = await Filesystem.readdir({
+                path: '',
+                directory: Directory.Data
+            });
+            console.log(ret)
+    
+            if (this.verifyIfExists('collection.json', ret.files)) {
+                Filesystem.readFile({
+                    path:"collection.json",
+                    directory: Directory.Data,
+                    encoding: Encoding.UTF8
+                })
+                .then(
+                    (value) => {
+                        this.collection = JSON.parse(value.data)
+                        console.log("File Found")
+                        this.onLoad()
+                    }
+                )
+                .catch(
+                    (err) => console.error(err)
+                )
+            }
+            else {
+                this.saveCollection()
+                this.onLoad()
+            }
+        } 
+        catch(e) {
+            console.log('Unable to read dir: ' + e);
+        }
+    }
+
+    verifyIfExists(ITEM, LIST) {
+        let verification = false;
+        for (const i of LIST) {
+            if (i === ITEM) {
+                verification = true;
+                break;
+            }
+        }
+        return verification;
+    }
 }
 
-export default new dataset(Collection)
+export default new dataset({})
