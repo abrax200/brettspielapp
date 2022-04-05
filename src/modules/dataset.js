@@ -1,7 +1,5 @@
 import { Filesystem, Directory, Encoding } from '@capacitor/filesystem'
-import Collection from "./data.json"
-//bin aktuell zu faul die datei tatsächlich einzulesen
-//import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
+//import Collection from "./data.json"
 
 class dataset{
     constructor(collection){
