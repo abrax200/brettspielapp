@@ -1,0 +1,36 @@
+.expand_button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid var(--icon-color);
+    border-right: 3px solid var(--icon-color);
+    border-radius: 3px;
+    transform: rotate(45deg);
+    margin-top: -40px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.delete_btn_container{
+    margin-top: 15px;
+    padding-left: 0;
+    padding-right: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+}
+
+.delete_btn{
+    height: fit-content;
+    width: fit-content;
+    border: none;
+    float: right;
+    color: var(--icon-color);
+    display: block;
+    font-weight:bolder;
+    background: transparent;
+    margin: 0px;
+    padding: 0;
+}

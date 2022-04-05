@@ -1,147 +1,136 @@
 import Dataset from "../../modules/dataset"
 import SelectList from "../../components/SelectList/SelectList.js"
-import React, {useState, useEffect} from "react"
-import Slider, {Range} from "rc-slider"
+import React, {useState} from "react"
+import {Range} from "rc-slider"
 import 'rc-slider/assets/index.css';
 import sliderStyle from "./sliderstyles.json"
 
-// Formular für filter und so
-function FilterForm(props){
+function CriteriaContainer(props){
+    let html = <></>
+    let [filter, setFilter] = useState({})
 
-    function callOnChange(){
-        if (props.onChange !== undefined){
-            props.onChange(
-                {
-                    playercount:pCount,
-                    age:age,
-                    time:time,
-                    gamemodes:gamemodes,
-                    gamemechanics:gamemechanics,
-                    theme:theme,
-                    language:language,
-                    communication:communication,
-                    goal:goal,
-                }
-            )
+    for (const i of props.list){
+        var sample
+        if (i.type === "select"){
+            sample =
+            <div>
+                <p>{i.display}</p>
+                <SelectList 
+                    items={Dataset.getAllOfCriteria(i.name)}
+                    selected={(filter[i.name] === undefined) ? []: filter[i.name]}
+                    onChange={(selected) => addvalue(i.name, selected)}
+                    />
+            </div>
+
         }
+
+        else if (i.type === "slider-double"){
+            sample =
+            <div>
+                <p>{i.display}: {String(filter[i.name]).replace(",", "-")}</p>
+                <div className="slider_wrapper">
+                    <Range
+                        onChange={(v) => addvalue(i.name, v)}
+                        value={filter[i.name]}
+                        min={Dataset.getMinMax(i.name)[0]}
+                        max={Dataset.getMinMax(i.name)[1]}
+                        step={1}
+                        style={sliderStyle.root}
+                        handleStyle={[sliderStyle.handle, sliderStyle.handle]}
+                        railStyle={sliderStyle.rail}
+                        trackStyle={[sliderStyle.track2]}/>
+                </div>
+            </div>
+        }
+        else if (i.type === "slider-single"){
+            sample =
+            <div>
+                <p>{i.display}: {filter[i.name]}</p>
+                <div className="slider_wrapper">
+                    <Range
+                        onChange={(v) => addvalue(i.name, v[1])}
+                        value={[Dataset.getMinMax(i.name)[0], filter[i.name]]}
+                        min={Dataset.getMinMax(i.name)[0]}
+                        max={Dataset.getMinMax(i.name)[1]}
+                        step={1}
+                        style={sliderStyle.root}
+                        handleStyle={[sliderStyle.handle, sliderStyle.handle]}
+                        railStyle={sliderStyle.rail}
+                        trackStyle={[sliderStyle.track2]}/>
+                </div>
+            </div>
+        }
+            else if (i.type === "switch"){
+            sample =
+            <div>
+                <p>{i.display}</p>
+                <SelectList
+                    single
+                    items={["Ja", "Egal", "Nein"]}
+                    selected={(filter[i.name] === undefined) ? []: filter[i.name]}
+                    onChange={(selected) => addvalue(i.name, selected)}
+                    />
+            </div>
+
+        }
+        html = <><p></p>{html}{sample}</>
     }
 
-    const [time_min, time_max] = Dataset.getMinMax("time")
-    const [time, setTime] = useState([time_min, time_max])
+    return (html)
 
-    const [pCount_min, pCount_max] = Dataset.getMinMax("playercount")
-    const [pCount, setPCount] = useState(pCount_min)
+    function addvalue(name, v){
+        const val = {...filter, [name]:v}
+        setFilter(val)
+        props.onChange(val)
+    }
+}
+/* <div>
+    <p>Ziel</p>
+        <SelectList 
+            items={Dataset.getAllOfCriteria("goal")}
+            selected={goal}
+            onChange={(value) => setGoal(value)}/>
+</div> */
 
-    const [age_min, age_max] = Dataset.getMinMax("age")
-    const [age, setAge] = useState(age_max)
-
-    // erstellt states für die SelectLists
-    const [gamemodes, setGamemodes] = useState([])
-    const [goal, setGoal] = useState([])
-    const [gamemechanics, setGamemechanics] = useState([])
-    const [theme, setTheme] = useState([])
-    const [language, setLanguage] = useState([])
-    const [communication, setCommunication] = useState([])
-
-    // falls sich die komponente updated wird onChange des Parents getriggert und dieser geupdated
-    useEffect(() => callOnChange(),
-    // \/ brauch ich weil mir react sonst sagt das ich etwas brauche, was ich nicht brauche
+// Formular für filter und so
+function FilterForm(props){
     // eslint-disable-next-line
-    [time, pCount, age, goal, gamemodes, gamemechanics, theme, language, communication])
+    let filter = {}
 
     return(
         <>
         {/* ist viel HTML, ich weiß */}
-
         <div
             className="filter_container noselection"
             style={
                 // das \/ ist btw eine abkürzung für if else, die ternary-operator genannt wird, nices teil
                 (props.expanded) ? {display:"block"} : {display:"none"}}>
-
-            <p>Spielerzahl: {pCount}+</p>
-            <Slider
-                min={pCount_min} 
-                max={pCount_max}
-                value={pCount}
-                handleStyle={sliderStyle.handle}
-                railStyle={sliderStyle.rail}
-                trackStyle={sliderStyle.track}
-                onChange={ (value) => setPCount(value) }/><br/>
             
-            <p>Spielmodi</p>
-            <SelectList 
-                items={Dataset.getAllOfCriteria("gamemodes")}
-                selected={gamemodes}
-                onChange={(value) => setGamemodes(value)}/>
+            <CriteriaContainer 
+            list={[
+                {name:"playercount", type:"slider-double", display:"Spielerzahl"},
+                {name:"gamemodes", type:"select", display:"Spielmodus"},
+                {name:"time", type:"slider-double", display:"Spieldauer"},
+                {name:"goal", type:"select", display:"Spieldauer"},
+                {name:"gametype", type:"select", display:"Spieltyp"},
+                {name:"gamemechanics", type:"select", display:"Spielmechanik"},
+                {name:"theme", type:"select", display:"Thema"},
+                {name:"language", type:"select", display:"Sprache"},
+                {name:"age", type:"slider-single", display:"Alter"},
+                {name:"communication", type:"select", display:"Kommunikation"},
+                {name:"campaign", type:"switch", display:"Kampagne"},
+                {name:"oneshots", type:"select", display:"One-Shots"},
+                
+            ]}
 
-            <p>Spieldauer: {time[0]}-{time[1]} min</p>
-            <Range
-                onChange={(value) => setTime(value)}
-                value={time}
-                min={time_min}
-                max={time_max}
-                step={15}
-                handleStyle={[sliderStyle.handle, sliderStyle.handle]}
-                railStyle={sliderStyle.rail}
-                trackStyle={[sliderStyle.track]}/><br/>
-            
-            <p>Ziel</p>
-            <SelectList 
-                items={Dataset.getAllOfCriteria("goal")}
-                selected={goal}
-                onChange={(value) => setGoal(value)}/>
-            
-            <p>Spielmechanik</p>
-            <SelectList 
-                items={Dataset.getAllOfCriteria("gamemechanics")}
-                selected={gamemechanics}
-                onChange={(value) => setGamemechanics(value)}/>
+            onChange={(e) => {props.onChange(Dataset.hasCriterias(e)); filter = e}}
+            />
 
-            <p>Thema</p>
-            <SelectList
-                items={Dataset.getAllOfCriteria("theme")}
-                selected={theme}
-                onChange={(value) => setTheme(value)}/>
-
-            <p>Sprache</p>
-            <SelectList
-                items={Dataset.getAllOfCriteria("language")}
-                selected={language}
-                onChange={(value) => setLanguage(value)}/>
-
-            <p>Alter: {age}+</p>
-            <Slider
-                min={age_min} 
-                max={age_max}
-                step="1"
-                value={age}
-                onChange={ (value) => setAge(value) }
-                handleStyle={[sliderStyle.handle, sliderStyle.handle]}
-                railStyle={sliderStyle.rail}
-                trackStyle={[sliderStyle.track]}/><br/>
-
-            <p>Kommunikation</p>
-            <SelectList items={Dataset.getAllOfCriteria("communication")}
-                selected={communication}
-                onChange={(value) => setCommunication(value)}/><br/><br/>
-            
             <div className="filter_buttons_container">
-                <button onClick={callOnChange}>
+                <button onClick={() => props.onChange(Dataset.hasCriterias(filter))}>
                     Filter anwenden
                 </button>
-                <button onClick={() => {
-                    setCommunication([])
-                    setGamemechanics([])
-                    setGamemodes([])
-                    setLanguage([])
-                    setTheme([])
-                    setAge(age_max)
-                    setPCount(pCount_min)
-                    setTime([time_min, time_max])
-                    setGoal([])
-                    
-                    callOnChange()}}>
+                <button onClick={() => {props.onChange(Dataset.games)}}>
                     Filter löschen
                 </button>
             </div>

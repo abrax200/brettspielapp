@@ -1,15 +1,35 @@
-// import { Filesystem, Directory, Encoding } from '@capacitor/filesystem'
-//bin aktuell zu faul die datei tatsächlich einzulesen
+import { Filesystem, Directory, Encoding } from '@capacitor/filesystem'
 import Collection from "./data.json"
+//bin aktuell zu faul die datei tatsächlich einzulesen
+//import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 
 class dataset{
     constructor(collection){
         this.collection = collection
+        this.onLoad = () => {}
+        this.onDelete = () => {}
+        Filesystem.readFile({
+            path:"collection.json",
+            directory: Directory.Data,
+            encoding: Encoding.UTF8
+        })
+        .then(
+            (value) => {
+                this.collection = JSON.parse(value.data)
+                this.onLoad()
+            }
+        )
+        .catch(
+            (err) => console.error(err)
+        )
     }
 
-    get games(){
-        return Object.keys(this.collection)
+    games(){
+        const val = Object.keys(this.collection)
+        val.sort()
+        return val 
     }
+
 
     game(name){
         const game = this.collection[name]
@@ -118,6 +138,41 @@ class dataset{
         }
 
         return foundGames
+    }
+
+    async newGame(game){
+        this.collection = {...this.collection, ...game}
+        this.saveCollection()
+        
+    }
+
+    async saveCollection(){
+        Filesystem.writeFile({
+            path: "collection.json",
+            data: JSON.stringify(this.collection),
+            directory: Directory.Data,
+            encoding: Encoding.UTF8
+        })
+        .then(
+            () => console.log("Succesfully written to file")
+        )
+        .catch(
+            (err) => console.error(err)
+        )
+    }
+
+    async deleteGame(name){
+        delete this.collection[name]
+        this.onDelete()
+        this.saveCollection()
+    }
+
+    addOnLoad(fun){
+        this.onLoad = fun
+    }
+
+    addOnDelete(fun){
+        this.onDelete = fun
     }
 }
 

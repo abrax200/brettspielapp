@@ -1,34 +1,42 @@
-:root{
-    --red:#ff2655;
-    --red2:#ff2692;
-    --background:rgb(30, 30, 30);
-    --shade1:rgb(40, 40, 40);
+#root{
+    --red:rgb(75, 237, 243);
+    --red2:rgb(75, 162, 243);
+    --middle:rgb(75, 200, 243);
+    --background:rgb(45, 45, 45);
+    --shade1:rgb(20, 20, 20);
     --shade2:rgb(50, 50, 50);
-    --shade3:rgb(60, 60, 60);
-    --border:rgb(70, 70, 70);
+    --shade3:rgb(52 52, 52);
+    --border:rgb(65, 65, 65);
     --font-color:white;
     --icon-color:#999999;
     --radius:20px;
+    --shadow:2.5px 5px 10px rgba(0, 0, 0, 0.25);
     --searchbar-width:315px;
+    --bdfilter:blur(25px);
+
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    margin: 0;
+    background: var(--background);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    flex: 1 1 auto;
 }
 
-/* @media (prefers-color-scheme: dark){
-    :root{
-        --red:#00ffd5;
-        --red2:#0077ff;
-        --background:rgb(230, 230, 230);
-        --shade1:rgb(40, 40, 40);
-        --shade2:rgb(255, 255, 255);
-        --shade3:rgb(230, 230, 230);
-        --border:rgb(220, 220, 220);
-        --font-color:rgb(0, 0, 0);
-        --icon-color:#999999;
-    }
-} */
+*{
+    font-family: Roboto;
+}
 
 @font-face {
     font-family: Roboto;
     src: url(./fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(./fonts/Ubuntu-Medium.ttf);
 }
 
 .noselection{
@@ -45,20 +53,19 @@ html, body, #root, .App {
     width: 100%;
     margin: 0;
     overflow: hidden;
-    background-color: var(--background);
+    background: var(--background);
 }
 
 .pagecontainer{
     width: 100%;
-    overflow-y: scroll;
-    flex: 1 1 auto;
-}
-#root{
-    display: flex;
-    flex-flow: column;
     height: 100%;
-    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: var(--background);
+}
+
+.pagecontainer.hidden{
+    display: none;
 }
 
 g>*{
@@ -67,17 +74,17 @@ g>*{
 
 /* Container für die Navigationsknöpfe */
 .tabs{
-    background-color: var(--shade2);
+    background: var(--shade2);
     width: 100%;
     flex: 0 1 50px;
-    border-top: 1px solid var(--border);
     display: flex;
     justify-content:space-around;
+    box-shadow: var(--shadow);
 }
 
 /* Navigationsknopf */
 .tabs_icon{
-    background-color: transparent;
+    background: transparent;
     border: none;
     width: 33.333%;
     height: 50px;
@@ -111,13 +118,17 @@ g>*{
 p{
     font-size: 16px;
     font-family: Roboto, sans-serif;
-    color:var(--font-color);
+    color:lightgrey;
 }
 
 h1{
-    font-size:large;
-    font-family: Roboto, sans-serif;
-    color:var(--font-color);
+    font-size:25px;
+    font-weight: bolder;
+    font-family: Ubuntu, sans-serif;
+    font-weight:normal;
+    color: transparent;
+    background-image: linear-gradient(var(--red), var(--red2));
+    background-clip: text;
 }
 
 .center{
@@ -128,13 +139,13 @@ hr{
     border: none;
     height: 1px;
     margin: 0;
-    background-color: var(--border);
+    background: var(--border);
 }
 
 .slider{
     -webkit-appearance: none;
     position: relative;
-    background-image: linear-gradient(to right, var(--red), var(--red2));
+    background:var(--red);
     width: 100%;
     margin: 0;
     height: 100%;
@@ -146,14 +157,22 @@ hr{
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    background-color: transparent;
+    background: transparent;
     cursor:pointer;
     border-radius: 100%;
     box-shadow: 100vw 0 0 calc(100vw - 7.5px) var(--shade3);
 }
 
+.slider_wrapper{
+    box-sizing: border-box;
+    height: 22px;
+    padding: 6px 11px 6px 11px;
+    border-radius: 100vmax;
+    box-shadow: inset 2px 3.5px 10px rgba(0, 0, 0, 0.2);
+}
+
 .color{
-    background-color: transparent;
+    background: transparent;
     border: none;
     height: 100px;
     width: 100px;
@@ -168,9 +187,22 @@ hr{
     padding: none;
 }
 
-#gradient{
-    width: 100%;
-    height: 200px;
+form{width: 0px; height: 0px;}
+
+*{
+    caret-color: var(--icon-color);
 }
 
-form{width: 0px; height: 0px;}
+*::-webkit-scrollbar{
+    background-color: transparent;
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 100vh;
+}

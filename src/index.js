@@ -2,24 +2,12 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './main.css'
 import SearchPage from "./pages/search/search.js"
-import CollectionPage from "./pages/collections/collections.js"
 import SettingsPage from "./pages/settings/settings.js"
+import Dataset from './modules/dataset';
 
 function PageContainer(){
 	//Variable page specihert die aktuelle Seite
 	var [page, setPage] = useState(1)
-
-	const CollectionsIcon = 
-			<>
-			{/* Hier muss ein Div hin, weil sich ein svg selbst nur schlecht layouten lässt */}
-			<div>
-				<svg>
-					<g transform="scale(0.25)">
-						<path d="m 75,70 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 75 c -2.77,0 -5,-2.23 -5,-5 V 75 c 0,-2.77 2.23,-5 5,-5 z m -35,0 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 40 c -2.77,0 -5,-2.23 -5,-5 V 75 c 0,-2.77 2.23,-5 5,-5 z M 5,70 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 5 C 2.23,100 0,97.77 0,95 V 75 C 0,72.23 2.23,70 5,70 Z M 75,35 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 75 c -2.77,0 -5,-2.23 -5,-5 V 40 c 0,-2.77 2.23,-5 5,-5 z m -35,0 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 40 c -2.77,0 -5,-2.23 -5,-5 V 40 c 0,-2.77 2.23,-5 5,-5 z M 5,35 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 5 C 2.23,65 0,62.77 0,60 V 40 C 0,37.23 2.23,35 5,35 Z M 75,0 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 75 c -2.77,0 -5,-2.23 -5,-5 V 5 C 70,2.23 72.23,0 75,0 Z M 40,0 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 40 c -2.77,0 -5,-2.23 -5,-5 V 5 C 35,2.23 37.23,0 40,0 Z M 5,0 h 20 c 2.77,0 5,2.23 5,5 v 20 c 0,2.77 -2.23,5 -5,5 H 5 C 2.23,30 0,27.77 0,25 V 5 C 0,2.23 2.23,0 5,0 Z"/>
-					</g>
-				</svg>
-			</div>
-			</>
 
 	const SearchIcon = 
 		<div>
@@ -42,15 +30,11 @@ function PageContainer(){
 	return(
 		<>
 		<div className="pagecontainer">
-			<div style={{display:(page === 0) ? "block": "none"}}><CollectionPage/></div>
 			<div style={{display:(page === 1) ? "block": "none"}}><SearchPage/></div>
 			<div style={{display:(page === 2) ? "block": "none"}}><SettingsPage/></div>
 		</div>
 		<nav className="tabs">
 		{/* Collections */}
-		<button className="tabs_icon" onClick={() => {setPage(0)}}>
-			{CollectionsIcon}
-		</button>
 		<button className="tabs_icon" onClick={() => {setPage(1)}}>
 			{SearchIcon}
 		</button>
@@ -62,9 +46,18 @@ function PageContainer(){
 	</>
 	)
 }
+
+function App(){
+	const [h, setH] = useState(0)
+	Dataset.addOnLoad(() => setH(1))
+	return(
+		<>{["App is loading...", <PageContainer/>][h]}</>
+	)
+}
+
 ReactDOM.render(
 	<React.StrictMode>
-		<PageContainer/>
+		<App/>
 	</React.StrictMode>,
 document.getElementById('root')
 );
