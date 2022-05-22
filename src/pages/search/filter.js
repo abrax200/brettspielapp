@@ -66,8 +66,9 @@ function CriteriaContainer(props){
                 <p>{i.display}</p>
                 <SelectList
                     single
+                    name={i.name}
                     items={["Ja", "Egal", "Nein"]}
-                    selected={(filter[i.name] === undefined) ? []: filter[i.name]}
+                    selected={(filter[i.name] === undefined) ? ["Egal"]: filter[i.name]}
                     onChange={(selected) => addvalue(i.name, selected)}
                     />
             </div>
@@ -76,7 +77,17 @@ function CriteriaContainer(props){
         html = <><p></p>{html}{sample}</>
     }
 
-    return (html)
+    return (<>
+        {html}
+        <div className="filter_buttons_container">
+            <button onClick={() => {props.onChange(filter)}}>
+                Filter anwenden
+            </button>
+            <button onClick={() => {setFilter({}); props.onChange({})}}>
+                Filter löschen
+            </button>
+        </div>
+    </>)
 
     function addvalue(name, v){
         const val = {...filter, [name]:v}
@@ -95,7 +106,7 @@ function CriteriaContainer(props){
 // Formular für filter und so
 function FilterForm(props){
     // eslint-disable-next-line
-    let filter = {}
+    let setFilter = useState({})[1]
 
     return(
         <>
@@ -108,7 +119,7 @@ function FilterForm(props){
             
             <CriteriaContainer 
             list={[
-                {name:"playercount", type:"slider-double", display:"Spielerzahl"},
+                {name:"playercount", type:"slider-single", display:"Spielerzahl"},
                 {name:"gamemodes", type:"select", display:"Spielmodus"},
                 {name:"time", type:"slider-double", display:"Spieldauer"},
                 {name:"goal", type:"select", display:"Spieldauer"},
@@ -119,21 +130,12 @@ function FilterForm(props){
                 {name:"age", type:"slider-single", display:"Alter"},
                 {name:"communication", type:"select", display:"Kommunikation"},
                 {name:"campaign", type:"switch", display:"Kampagne"},
-                {name:"oneshots", type:"select", display:"One-Shots"},
+                {name:"oneshots", type:"switch", display:"One-Shots"},
                 
             ]}
 
-            onChange={(e) => {props.onChange(Dataset.hasCriterias(e)); filter = e}}
+            onChange={(e) => {props.onChange(Dataset.hasCriterias(e)); setFilter(e)}}
             />
-
-            <div className="filter_buttons_container">
-                <button onClick={() => props.onChange(Dataset.hasCriterias(filter))}>
-                    Filter anwenden
-                </button>
-                <button onClick={() => {props.onChange(Dataset.games)}}>
-                    Filter löschen
-                </button>
-            </div>
             <br/>
             <hr/>
         </div>

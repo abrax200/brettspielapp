@@ -49,15 +49,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
+    padding: 0px 14px;
+    margin: 5px;
     border: none;
-    margin: 0 10px;
+    border-radius: 100vmax;
+    color: var(--font-color);
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+    background-image:linear-gradient(var(--red), var(--red2));
+    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 25px transparent, 0px 0px 5px var(--middle);
+    vertical-align:bottom;
+    transition: box-shadow 0.5s, background-color 0.5s;
 }
 
 .filter-button>div>svg{
     display: block;
     width: 25px;
     height: 25px;
+    align-self: center;
 }
 
 .filter-button:active{
@@ -71,7 +80,7 @@
 }
 
 .filter-button>div>svg>g>*{
-    fill:var(--icon-color);
+    fill:#fff;
 }
 
 .gamecard_container{
@@ -200,21 +209,19 @@
   }
 
 .addgame_btn{
-    margin: 0 0 0 -10px;
-    padding: 0;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border:  none;
-}
+    line-height: 16px;
+    padding: 0px 14px;
+    margin: 5px;
 
-.addgame_btn>p{
-    display: block;
-    font-size: 30px;
-    color: var(--icon-color);
-
+    border: none;
+    border-radius: 100vmax;
+    color: var(--font-color);
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+    background-image:linear-gradient(var(--red), var(--red2));
+    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 25px transparent, 0px 0px 5px var(--middle);
+    vertical-align:middle;
+    transition: box-shadow 0.5s, background-color 0.5s;
 }
 
 .addgame_btn:active{

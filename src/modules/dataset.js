@@ -1,13 +1,20 @@
 import { Filesystem, Directory, Encoding } from '@capacitor/filesystem'
-//import Collection from "./data.json"
+import Collection from "./data.json"
 
 class dataset{
+
     constructor(collection){
         this.collection = collection
         this.onLoad = () => {}
         this.onDelete = () => {}
         this.CheckForFile()
     }
+
+    addJSONtoCollection(json){
+        this.collection = {...this.collection, ...json}
+        this.saveCollection()
+    }
+
 
     games(){
         const val = Object.keys(this.collection)
@@ -81,7 +88,7 @@ class dataset{
             {foundGames.push(i)}
         }
 
-        return(foundGames)
+        return(foundGames.sort())
     }
 
     matchesCriteria(game, criteria, val){
@@ -101,6 +108,25 @@ class dataset{
             case "communication":
                 return(val.includes(valueOfCriteria) || val.length === 0)
 
+            case "oneshots":
+                if (val[0] === "Egal"){
+                    return true
+                    
+                }
+                else {
+                    //console.log(val, valueOfCriteria)
+                    return(val[0].toLowerCase() === valueOfCriteria.toLowerCase())  
+                }
+            case "campaign":
+                if (val[0] === "Egal"){
+                    return true
+                    
+                }
+                else {
+                    //console.log(val, valueOfCriteria)
+                    return(val[0].toLowerCase() === valueOfCriteria.toLowerCase())  
+                }
+
             default:
                 return(val.every(str => valueOfCriteria.includes(str)) || val === [])
         }
@@ -115,6 +141,9 @@ class dataset{
             for (const criteria in criterias){
                 const val = criterias[criteria]
                 const matchesThisCriteria = this.matchesCriteria(this.collection[game], criteria, val)
+                //console.log(criteria, val)
+                //console.log(game, this.collection[game][criteria])
+                ////console.log(matchesThisCriteria)
                 matchesAllCheckedCriterias = matchesAllCheckedCriterias && matchesThisCriteria
             }
             if(matchesAllCheckedCriterias){
@@ -122,7 +151,7 @@ class dataset{
             }
         }
 
-        return foundGames
+        return foundGames.sort()
     }
 
     async newGame(game){
@@ -179,7 +208,7 @@ class dataset{
                 path: '',
                 directory: Directory.Data
             });
-            console.log(ret)
+            //console.log(ret)
     
             if (this.verifyIfExists('collection.json', ret.files)) {
                 Filesystem.readFile({
@@ -190,7 +219,7 @@ class dataset{
                 .then(
                     (value) => {
                         this.collection = JSON.parse(value.data)
-                        console.log("File Found")
+                        //console.log("File Found")
                         this.onLoad()
                     }
                 )
@@ -204,7 +233,7 @@ class dataset{
             }
         } 
         catch(e) {
-            console.log('Unable to read dir: ' + e);
+            //console.log('Unable to read dir: ' + e);
         }
     }
 
@@ -219,5 +248,26 @@ class dataset{
         return verification;
     }
 }
-
-export default new dataset({})
+export default new dataset(Collection)
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/////////\\\\\////////
+///////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////
+///////////\\\\\///////////////////////\\\\\/////////\\\\\////////

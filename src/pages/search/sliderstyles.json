@@ -11,7 +11,7 @@
         "margin":"0",
         "border":"none",
         "boxShadow":"none",
-        "backgroundImage":"linear-gradient(rgb(75, 237, 243), rgb(75, 162, 243))",
+        "backgroundImage":"linear-gradient(var(--red), var(--red2))",
         "height":"10px",
         "width":"10px"
         
@@ -28,5 +28,5 @@
         "height":"10px",
         "margin":"0px",
         "borderRadius":"0px",
-        "backgroundImage":"linear-gradient(rgb(75, 237, 243), rgb(75, 162, 243))"}
+        "backgroundImage":"linear-gradient(var(--red), var(--red2))"}
 }

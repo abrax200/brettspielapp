@@ -14,14 +14,6 @@ function SearchPage(){
         Dataset.games().includes(i)
     ))})
 
-    const icon = 
-    <svg fill="#fff">
-        <g transform="scale(0.25)">
-            {/* Alles in d= muss man nicht verstehen, ich auch nicht */}
-            <path d="M 42.00575,88.516113 30.40478,100 c 0,0 0,0 0,-11.483887 0,-4.40085 0,0 0,-4.40085 l 4.06526,-3.169895 c 1.35561,-1.057028 3.1671,-1.21903 4.38049,0 l 3.15522,3.169895 c 1.21339,1.219037 1.22232,3.190859 0,4.40085 z m 0.91004,-58.274304 v 55.539509 c 0,2.023878 -1.62179,3.653215 -3.6363,3.653215 h -5.2384 c -2.01451,0 -3.63631,-1.629337 -3.63631,-3.653215 V 30.241809 c 0,-2.023882 1.6218,-3.653217 3.63631,-3.653217 h 5.2384 c 2.01451,0 3.6363,1.629335 3.6363,3.653217 z M 3.666,0 h 65.988 c 2.03096,0 3.666,1.6426388 3.666,3.6830467 V 8.988774 c 0,2.040407 -1.63504,3.683046 -3.666,3.683046 H 3.666 C 1.635036,12.67182 0,11.029181 0,8.988774 V 3.6830467 C 0,1.6426388 1.635036,0 3.666,0 Z m 68.62156,6.7947201 c 1.37658,1.3829808 1.37659,3.6097329 0,4.9927159 l -33.14275,33.29687 c -1.37659,1.382982 -3.59304,1.382981 -4.96961,0 L 1.032438,11.787433 c -1.376582,-1.382983 -1.376582,-3.6097343 0,-4.9927173 71.255122,4.4e-6 0,0 71.255122,4.4e-6 z" />
-        </g>
-    </svg>
-
     return(
         <>
         <NewGameDialogue 
@@ -73,14 +65,12 @@ function SearchPage(){
                 <button
                     	className="filter-button"
                         onClick={() => {setfilterExpanded(!FilterExpanded)}}>
-                    <div>
-                        {icon}
-                    </div>
+                    Filter
                 </button>
                 <button
                     className="addgame_btn"
                     onClick={() => setDialogueOpen(true)}>
-                    <p>+</p>
+                    Neues Spiel
                 </button>
             </div>
         </div>
@@ -151,7 +141,7 @@ function SearchPage(){
                                 min="0"
                                 autoComplete="off"
                                 spellCheck="false"
-                                onInput={(e) => addvalue(name, parseInt(e.currentTarget.value))}
+                                onInput={(e) => addvalue(name, parseInt(e.currentTarget.value.replace("", "0")))}
                                 />
                         </form>
                     </>
@@ -212,7 +202,7 @@ function SearchPage(){
                                             pair[1] = e.currentTarget.value
                                             addvalue(name, [parseInt(pair[0]), parseInt(pair[1])])
                                         }}
-                                        />
+                                        /> 
                                 </form>
                             </div>
                         </>
@@ -227,7 +217,7 @@ function SearchPage(){
                             (criterias[name] === undefined) ? 
                                 "":
                                 criterias[name]}
-                        onChange={(v) => addvalue(name, v)}
+                        onChange={(v) => {console.log("V",v[0]);addvalue(name, v[0])}}
                         />
                 </>
                 break
@@ -240,7 +230,7 @@ function SearchPage(){
                     style={{width:"100%", marginBottom:"10px", height:"auto", display:"flex", justifyContent:"center"}}
                     onSubmit={(e) => {
 
-                        if (text === ""){void(0)}
+                        if (text === ""){setPage(page + 1)}
                         else if (criterias[name] === []){
                             setNewItems([text, ...newItems])
                             addvalue(name, [text,])

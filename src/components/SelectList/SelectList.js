@@ -13,10 +13,11 @@ export default function SelectList(props){
     const singleoption = props.single
 
     //erstmal nur ein Button, zum leeren der Auswahl
-    var html =
+    var html = (props.single) ? 
+    <></>:
     <button
         className="clear"
-        onClick={clearSelection}></button>
+        onClick={clearSelection}>X</button>
     
     let count = 0
     let itemcount = 0
@@ -39,7 +40,7 @@ export default function SelectList(props){
         var boxsample = 
         <label className="selection_main">
             <input
-            name="SelectListThing"
+            name={props.name}
             checked={props.selected.includes(items[item])}
             onChange={() => {return(false)}}
             type={(singleoption) ? "radio": "checkbox"}/>
