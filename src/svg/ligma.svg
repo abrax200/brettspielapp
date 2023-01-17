@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21cm"
+   height="7cm"
+   viewBox="0 0 210 70"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="ligma.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5233586"
+     inkscape:cx="459.18276"
+     inkscape:cy="120.78574"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1986">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0.16231884"
+         id="stop1998" />
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1;"
+         offset="0.16811594"
+         id="stop2010" />
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1;"
+         offset="0.3101449"
+         id="stop1996" />
+      <stop
+         style="stop-color:#00ff00;stop-opacity:1;"
+         offset="0.3101449"
+         id="stop2008" />
+      <stop
+         style="stop-color:#00ff00;stop-opacity:1;"
+         offset="0.45217392"
+         id="stop1994" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0.45217392"
+         id="stop2006" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0.59565216"
+         id="stop1992" />
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1;"
+         offset="0.59565216"
+         id="stop1990" />
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1;"
+         offset="0.75072461"
+         id="stop2000" />
+      <stop
+         style="stop-color:#ff00ff;stop-opacity:1;"
+         offset="0.75072461"
+         id="stop1982" />
+      <stop
+         style="stop-color:#ff00ff;stop-opacity:1;"
+         offset="0.87536234"
+         id="stop2004" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0.87536234"
+         id="stop2002" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect579"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="true"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1986"
+       id="linearGradient1988"
+       x1="0"
+       y1="70"
+       x2="210"
+       y2="3.305263"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="repeat" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient1988);fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;opacity:0.6986755"
+       id="rect1928"
+       width="210"
+       height="70"
+       x="0"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:50.8px;line-height:1.25;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift Bold';letter-spacing:2.01612px;fill:#a3ff00;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="24.311352"
+       y="47.935646"
+       id="text593"
+       transform="matrix(1,0,-0.36639224,1,21.253902,0)"><tspan
+         id="tspan591"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift Bold';fill:#a3ff00;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         x="24.311352"
+         y="47.935646"
+         sodipodi:role="line">ligma</tspan></text>
+  </g>
+</svg>

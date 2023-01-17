@@ -28,7 +28,7 @@ export default function SelectList(props){
 
         itemcount += 1
         count = count + items[item].length
-        if (count > 100 && items.length - itemcount > 2){
+        if (count > 60 && items.length - itemcount > 2){
             buttonsample = 
             <button className="showmore_button" onClick={() => setShowMore(!showMore)}>
                 {(showMore) ? "weniger anzeigen": "mehr amzeigen"}

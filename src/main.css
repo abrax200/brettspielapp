@@ -1,15 +1,17 @@
 #root{
-    --red:rgb(228, 161, 74);
-    --red2:rgb(187, 132, 61);
-    --middle:rgb(208, 147, 68);
-    --background:rgb(45, 45, 45);
+    --red:rgb(200, 200, 200);
+    --red2:rgb(200, 200, 200);
+    --middle:rgb(200, 200, 200);;
+    --background:rgb(25, 25, 25);
     --shade1:rgb(20, 20, 20);
-    --shade2:rgb(50, 50, 50);
-    --shade3:rgb(52 52, 52);
-    --border:rgb(65, 65, 65);
+    --shade2:rgb(30, 30, 30);
+    --shade3:rgb(32 32, 32);
+    --border:rgb(45, 45, 45);
     --font-color:white;
     --icon-color:#999999;
-    --radius:20px;
+    --accent:#79ffc7 ;
+    --accentlowopacity:#79ffc7b3 ;
+    --radius:12.5px;
     --shadow:2.5px 5px 10px rgba(0, 0, 0, 0.25);
     --searchbar-width:315px;
     --bdfilter:blur(25px);
@@ -32,11 +34,6 @@
 @font-face {
     font-family: Roboto;
     src: url(./fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: Ubuntu;
-    src: url(./fonts/Ubuntu-Medium.ttf);
 }
 
 .noselection{
@@ -80,6 +77,8 @@ g>*{
     display: flex;
     justify-content:space-around;
     box-shadow: var(--shadow);
+    border-top: 1px solid var(--border);
+    border-radius: var(--radius);
 }
 
 /* Navigationsknopf */
@@ -103,12 +102,14 @@ g>*{
 
 .tabs_icon:active{
     transform:scale(.9, .9);
-    transition: transform .25s;
+    color: var(--accent);
+    transition: transform .5s, color .1s;
 }
 
 .tabs_icon:active>div>svg>g>*{
-    filter:drop-shadow(0 0 10px var(--red));
-    fill:var(--red);
+
+    fill:var(--accent);
+    transition: color .1s;
 }
 
 .tabs_icon>div>svg>g>*{
@@ -118,17 +119,14 @@ g>*{
 p{
     font-size: 16px;
     font-family: Roboto, sans-serif;
-    color:lightgrey;
+    color:var(--red);
 }
 
 h1{
     font-size:25px;
-    font-weight: bolder;
-    font-family: Ubuntu, sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight:normal;
-    color: transparent;
-    background-image: linear-gradient(var(--red), var(--red2));
-    background-clip: text;
+    color:var(--red);
 }
 
 .center{
@@ -165,7 +163,8 @@ hr{
 
 .slider_wrapper{
     box-sizing: border-box;
-    height: 22px;
+    border: 1px solid var(--border);
+    height: 23px;
     padding: 6px 11px 6px 11px;
     border-radius: 100vmax;
     box-shadow: inset 2px 3.5px 10px rgba(0, 0, 0, 0.2);
@@ -191,10 +190,16 @@ form{width: 0px; height: 0px;}
 
 *{
     caret-color: var(--icon-color);
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    color:lightgrey;
+    border: none;
+    outline: none;
 }
 
 *::-webkit-scrollbar{
     background-color: transparent;
+    display: none;
     width: 15px;
 }
 
@@ -204,5 +209,6 @@ form{width: 0px; height: 0px;}
 
 *::-webkit-scrollbar-thumb{
     background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 100vh;
+    border: 1px solid var(--border);
+    border-radius: 5px; 
 }

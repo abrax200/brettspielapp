@@ -1,6 +1,7 @@
 import "../../pages/search/search.css"
 import Dataset from "../../modules/dataset.js"
 import "./GameCard.css"
+import { useState } from "react"
 
 function CriteriaIndicator(props){
     let percents = (props.value - props.min) / (props.max - props.min) * 100
@@ -29,7 +30,9 @@ function CriteriaIndicator2(props){
 }
 
 export default function GameCard(props){
-    var g = Dataset.collection[props.name]
+    var g = Dataset.game(props.name)
+    const [CriteriasExpanded, setCriteriasExpanded] = useState(false)
+
     return(
     <div className="gamecard">
         <div className="delete_btn_container">
@@ -43,7 +46,9 @@ export default function GameCard(props){
                 >╳</button>
         </div>
         <h1 style={{marginTop:"0"}} className="center">{props.name}</h1>
-        <div className="criteria_container">
+        <div
+            style={{display:(CriteriasExpanded ? "grid": "none")}} 
+            className="criteria_container">
             <div className="criteria">
                 <div className="criteria_title">Spielerzahl</div>
                 <div className="criteria_vertical_center">
@@ -112,6 +117,11 @@ export default function GameCard(props){
                 </div>
             </div>
         </div>
+        <button 
+            className="criteria_showmore" 
+            onClick={() => setCriteriasExpanded(! CriteriasExpanded)}>
+            {CriteriasExpanded ? "weniger anzeigen...": "mehr anzeigen..."}
+        </button>
     </div>
     )
 }

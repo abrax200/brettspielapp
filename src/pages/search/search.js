@@ -21,33 +21,18 @@ function SearchPage(){
             close={() => 
             setDialogueOpen(false)}
             onSubmit={(game) => {
-                let name = game.name
-                Dataset.newGame({[name]:game})
+                Dataset.newGame(game)
                 setGames(Dataset.games())
             }}
             dial={[
-                {name:"name", display:"Wie heißt das Spiel?", placeholder:"z. B. Schach", type:"text"},
-                {name:"playercount", display:"Wie viele Spieler?", type:"dual-number"},
-                {name:"time", display:"Wie viele Minuten braucht man ungefähr pro Spiel?", type:"number"},
-                {name:"age", display:"Ab welchem Alter ist das Spiel geeignet?", type:"number"},
-                {name:"gamemodes", display:"Welche Spielmodi gibt es?", type:"select", placeholder:"z. B. Solo"},
-                {name:"goal", display:"Was ist das Ziel des Spiels?", type:"select", placeholder:"z. B. Boss besiegen"},
-                {name:"gametype", display:"Was für ein Typ ist dieses Spiel?", type:"select", placeholder:"z. B. Brettspiel"},
-                {name:"gamemechanics", display:"Welche Spielmechaniken gibt es?", type:"select", placeholder:"z. B. Echtzeit"},
-                {name:"theme", display:"Um welches Thema dreht sich das Spiel?", type:"select", placeholder:"z. B. Abenteuer"},
-                {name:"language", display:"In welchen Sprachen kann man das Spiel spielen?", type:"select", placeholder:"z. B. Englisch"},
-                {name:"communication", display:"Wie stark ist die Kommunikation?", type:"select", placeholder:"z. B. stark eingeschränkt"},
-                {name:"campaign", display:"Gibt es eine Kampagne", type:"boolean"},
-                {name:"oneshots", display:"Gibt es One-Shots?", type:"boolean"},
+                {name:"name", question:"Wie heißt das Spiel?", stored_type_b:"text"},
+                ...Dataset.collection.criterias
 
             ]}/>
         {/* container für den container der Suchleiste und dem filterknopf, als auch den filter einstellungen */}
         <div className="search_container">
             {/* container der Suchleiste und dem filterknopf*/}
             {/* formular für suchleiste etc. */}
-            <FilterForm
-                onChange={(res) => setGames(res)}
-                expanded={FilterExpanded}/>
             <div className="searchbar_container">
                 {/*suchleiste  */}
                 <form
@@ -70,9 +55,12 @@ function SearchPage(){
                 <button
                     className="addgame_btn"
                     onClick={() => setDialogueOpen(true)}>
-                    Neues Spiel
+                    +
                 </button>
             </div>
+            <FilterForm
+                onChange={(res) => setGames(res)}
+                expanded={FilterExpanded}/>
         </div>
         <GameContainer games={Games}/>
         </>
@@ -92,7 +80,7 @@ function SearchPage(){
             setNewItems([])
         }, [page,])
 
-        switch(props.dial[page].type) {
+        switch(props.dial[page].stored_type_b) {
             case "text":
                 qhtml = <>
                     <form
@@ -112,7 +100,6 @@ function SearchPage(){
                             style={{display:"block"}} 
                             type="text"
                             autoComplete="off"
-                            placeholder={props.dial[page].placeholder}
                             spellCheck="false"
                             onChange={(e) => addvalue(name, e.currentTarget.value)}
                             />
@@ -120,7 +107,7 @@ function SearchPage(){
                 </>
                 break
 
-                case "number":
+                case "single_number":
                     qhtml = <>
                         <form 
                             style={{width:"100%", height:"auto", display:"flex", justifyContent:"center"}}
@@ -147,7 +134,7 @@ function SearchPage(){
                     </>
                     break
 
-                    case "dual-number":
+                    case "double_number":
                         let pair = (criterias[name] === undefined) ? 
                             [0, 0]: 
                             criterias[name]
@@ -208,7 +195,7 @@ function SearchPage(){
                         </>
                         break
             
-            case "boolean":
+            case "bool":
                 qhtml = <>
                     <SelectList
                         single
@@ -216,13 +203,13 @@ function SearchPage(){
                         selected={
                             (criterias[name] === undefined) ? 
                                 "":
-                                criterias[name]}
-                        onChange={(v) => {console.log("V",v[0]);addvalue(name, v[0])}}
+                                {[true]:["Ja"], [false]:"Nein"}[criterias[name]]}
+                        onChange={(v) => {addvalue(name, {"Ja":true, "Nein":false}[v[0]])}}
                         />
                 </>
                 break
             
-            case "select":
+            case "set":
                 criterias[name] = (criterias[name] === undefined) ? []: criterias[name]
                 
                 qhtml = <>
@@ -281,7 +268,7 @@ function SearchPage(){
                 justifyContent:"center",
                 backgroundColor:"transparent",
                 border:"none",
-                backdropFilter:"saturate(85%) contrast(50%) brightness(45%)",
+                backdropFilter:"saturate(200%) contrast(65%) brightness(40%) blur(30px)",
             }: {display:"none"}}>
                 <div className="gamecard new_game_dialogue">
                     <div className="gamecard rest">
@@ -291,7 +278,7 @@ function SearchPage(){
                                 className="clear"
                                 onClick={props.close}>╳</button>
                         </div>
-                        <h1>{props.dial[page].display}</h1>
+                        <h1>{props.dial[page].question}</h1>
                     </div>
                     <div className="gamecard input_container">
                         {qhtml}

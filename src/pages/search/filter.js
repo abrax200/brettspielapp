@@ -11,9 +11,9 @@ function CriteriaContainer(props){
 
     for (const i of props.list){
         var sample
-        if (i.type === "select"){
+        if (i.filter_type_a === "set"){
             sample =
-            <div>
+            <div className="gamecard spacing">
                 <p>{i.display}</p>
                 <SelectList 
                     items={Dataset.getAllOfCriteria(i.name)}
@@ -24,10 +24,10 @@ function CriteriaContainer(props){
 
         }
 
-        else if (i.type === "slider-double"){
+        else if (i.filter_type_a === "double_number"){
             sample =
-            <div>
-                <p>{i.display}: {String(filter[i.name]).replace(",", "-")}</p>
+            <div className="gamecard spacing">
+                <p>{i.display}: {String(filter[i.name]).replace(",", " – ").replace("undefined", "")}</p>
                 <div className="slider_wrapper">
                     <Range
                         onChange={(v) => addvalue(i.name, v)}
@@ -42,9 +42,9 @@ function CriteriaContainer(props){
                 </div>
             </div>
         }
-        else if (i.type === "slider-single"){
+        else if (i.filter_type_a === "single_number"){
             sample =
-            <div>
+            <div className="gamecard spacing">
                 <p>{i.display}: {filter[i.name]}</p>
                 <div className="slider_wrapper">
                     <Range
@@ -60,30 +60,39 @@ function CriteriaContainer(props){
                 </div>
             </div>
         }
-            else if (i.type === "switch"){
+            else if (i.filter_type_a === "bool"){
             sample =
-            <div>
+            <div className="gamecard spacing">
                 <p>{i.display}</p>
                 <SelectList
                     single
                     name={i.name}
                     items={["Ja", "Egal", "Nein"]}
-                    selected={(filter[i.name] === undefined) ? ["Egal"]: filter[i.name]}
-                    onChange={(selected) => addvalue(i.name, selected)}
+                    selected={(filter[i.name] === undefined) ? ["Egal"]: {[true]:["Ja"], [false]:["Nein"]}[filter[i.name]]}
+                    onChange={(selected) => {
+                        if(selected[0] === "Egal"){
+                            deletevalue(i.name)
+                        }
+                        else {
+                            addvalue(i.name, {"Ja":true, "Nein":false}[selected[0]])
+                        }
+                    }}
                     />
             </div>
 
         }
-        html = <><p></p>{html}{sample}</>
+        html = <>{html}{sample}</>
     }
 
     return (<>
-        {html}
+        <div className="FilterCriteriaContainer">
+            {html}
+        </div>
         <div className="filter_buttons_container">
             <button onClick={() => {props.onChange(filter)}}>
                 Filter anwenden
             </button>
-            <button onClick={() => {setFilter({}); props.onChange({})}}>
+            <button onClick={() => {setFilter({}); props.onChange([])}}>
                 Filter löschen
             </button>
         </div>
@@ -91,6 +100,13 @@ function CriteriaContainer(props){
 
     function addvalue(name, v){
         const val = {...filter, [name]:v}
+        setFilter(val)
+        props.onChange(val)
+    }
+    function deletevalue(name, v){
+        // eslint-disable-next-line
+        const {[name]:property, ...val} = filter
+        
         setFilter(val)
         props.onChange(val)
     }
@@ -116,28 +132,13 @@ function FilterForm(props){
             style={
                 // das \/ ist btw eine abkürzung für if else, die ternary-operator genannt wird, nices teil
                 (props.expanded) ? {display:"block"} : {display:"none"}}>
-            
+            <hr/>
             <CriteriaContainer 
-            list={[
-                {name:"playercount", type:"slider-single", display:"Spielerzahl"},
-                {name:"gamemodes", type:"select", display:"Spielmodus"},
-                {name:"time", type:"slider-double", display:"Spieldauer"},
-                {name:"goal", type:"select", display:"Spieldauer"},
-                {name:"gametype", type:"select", display:"Spieltyp"},
-                {name:"gamemechanics", type:"select", display:"Spielmechanik"},
-                {name:"theme", type:"select", display:"Thema"},
-                {name:"language", type:"select", display:"Sprache"},
-                {name:"age", type:"slider-single", display:"Alter"},
-                {name:"communication", type:"select", display:"Kommunikation"},
-                {name:"campaign", type:"switch", display:"Kampagne"},
-                {name:"oneshots", type:"switch", display:"One-Shots"},
-                
-            ]}
+            list={Dataset.collection.criterias}
 
             onChange={(e) => {props.onChange(Dataset.hasCriterias(e)); setFilter(e)}}
             />
             <br/>
-            <hr/>
         </div>
         </>
     )

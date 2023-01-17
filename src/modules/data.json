@@ -1,1104 +1,1388 @@
-{   
-    "Kitchen Rush": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 10,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Echtzeit",
-            "gleichzeitig spielen"
-        ],
-        "theme": [
-            "Lebensmittel",
-            "Berufsleben",
-            "Realität"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 10,
-        "communication": "sehr hoch",
-        "campaign": "ja",
-        "oneshots": "nein"
-    },
-    "Legenden von Andor": {
-        "playercount": [
-            1,
-            6
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 90,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "gleichzeitig spielen",
-            "würfeln",
-            "Figuren bewegen",
-            "Charakterentwicklung"
-        ],
-        "theme": [
-            "Helden",
-            "Fantasy"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 8,
-        "communication": "sehr hoch",
-        "campaign": "ja",
-        "oneshots": "nein"
-    },
-    "Marvel United": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 45,
-        "goal": [
-            "Boss besiegen",
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Brettspiel, Kartenspiel",
-        "gamemechanics": [
-            "Kartenspiel",
-            "Hand Management",
-            "Figuren bewegen"
-        ],
-        "theme": [
-            "Helden",
-            "Comic",
-            "Miniaturen",
-            "Franchise"
-        ],
-        "language": [
-            "DE",
-            "EN"
-        ],
-        "age": 8,
-        "communication": "hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Harry Potter - Schlacht um Hogwarts": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 60,
-        "goal": [
-            "Gegner besiegen"
-        ],
-        "gametype": "Kartenspiel",
-        "gamemechanics": [
-            "Deckbuilder",
-            "Charakterentwicklung"
-        ],
-        "theme": [
-            "Legacy",
-            "Fantasy",
-            "Franchise",
-            "Zauberer"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 10,
-        "communication": "hoch",
-        "campaign": "ja",
-        "oneshots": "ja"
-    },
-    "Kneipenquiz": {
-        "playercount": [
-            1,
-            "Infinity"
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 45,
-        "goal": [
-            "KI Gegner besiegen",
-            "Rennen"
-        ],
-        "gametype": "Partyspiel",
-        "gamemechanics": [
-            "Quiz",
-            "Rennen"
-        ],
-        "theme": [
-            "Quiz",
-            "Fragen ohne Antwortmöglichkeiten"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Phantom the Card Game": {
-        "playercount": [
-            1,
-            2
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 45,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Kartenspiel",
-        "gamemechanics": [
-            "Deckbuilder",
-            "Hand Management"
-        ],
-        "theme": [
-            "Helden",
-            "Comic",
-            "Franchise"
-        ],
-        "language": [
-            "EN"
-        ],
-        "age": 10,
-        "communication": "Leicht eingeschänkt",
-        "campaign": "ja",
-        "oneshots": "ja"
-    },
-    "The Game": {
-        "playercount": [
-            1,
-            5
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 15,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Kartenspiel",
-        "gamemechanics": [
-            "Kartenspiel",
-            "Hand Management",
-            "Anlegen"
-        ],
-        "theme": [
-            "abstrakt"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 8,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Belratti": {
-        "playercount": [
-            2,
-            7
-        ],
-        "gamemodes": [
-            "kooperativ"
-        ],
-        "time": 30,
-        "goal": [
-            "Highscore"
-        ],
-        "gametype": "Kartenspiel, Partyspiel",
-        "gamemechanics": [
-            "Kartenspiel",
-            "Deduktion"
-        ],
-        "theme": [
-            "Kunstgalerie",
-            "abstrakt",
-            "Partyspiel"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 10,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Mysterium": {
-        "playercount": [
-            2,
-            6
-        ],
-        "gamemodes": [
-            "kooperativ"
-        ],
-        "time": 60,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Partyspiel, Brettspiel",
-        "gamemechanics": [
-            "Deduktion"
-        ],
-        "theme": [
-            "Mystisch",
-            "Partyspiel",
-            "abstrakt",
-            "Kreativität"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "stark eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Dixit": {
-        "playercount": [
-            3,
-            6
-        ],
-        "gamemodes": [
-            "kompetitiv"
-        ],
-        "time": 30,
-        "goal": [
-            "Rennen"
-        ],
-        "gametype": "Partyspiel, Brettspiel",
-        "gamemechanics": [
-            "Deduktion",
-            "Storytelling",
-            "Rennen"
-        ],
-        "theme": [
-            "Partyspiel",
-            "abstrakt"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "stark eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Das \u00c4ltere Zeichen": {
-        "playercount": [
-            1,
-            8
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 60,
-        "goal": [
-            "Boss besiegen",
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Kartenspiel, Würfelspiel",
-        "gamemechanics": [
-            "Encounter",
-            "Würfel und Karten",
-            "Kniffelmechanik"
-        ],
-        "theme": [
-            "Lovecraft",
-            "Horror",
-            "Ermittler",
-            "lokal"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 14,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Eldritch Horror": {
-        "playercount": [
-            1,
-            8
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 120,
-        "goal": [
-            "Aufgaben erfüllen",
-            "Boss besiegen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Encounter",
-            "Würfelproben"
-        ],
-        "theme": [
-            "Lovecraft",
-            "Horror",
-            "Ermittler",
-            "Abenteuer"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 14,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Arkham Horror LCG": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 90,
-        "goal": [
-            "Aufgaben erfüllen",
-            "Gegner besiegen"
-        ],
-        "gametype": "Kartenspiel",
-        "gamemechanics": [
-            "Deckbuilder",
-            "Encounter",
-            "Proben",
-            "Narrativ"
-        ],
-        "theme": [
-            "Lovecraft",
-            "Horror",
-            "Ermittler",
-            "lokal"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 14,
-        "communication": "sehr hoch",
-        "campaign": "ja",
-        "oneshots": "ja"
-    },
-    "Orleans Invasions": {
-        "playercount": [
-            1,
-            5
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 90,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Bagbuilder",
-            "Euro"
-        ],
-        "theme": [
-            "Mittelater",
-            "Wirtschaftssimulation"
-        ],
-        "language": [
-            "DE",
-            "EN"
-        ],
-        "age": 12,
-        "communication": "mittel",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Vanguard of War": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 120,
-        "goal": [
-            "Basis verteidigen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Castle-Defense",
-            "Figuren bewegen",
-            "Würfelproben"
-        ],
-        "theme": [
-            "Horror",
-            "Fantasy",
-            "SciFi",
-            "Miniaturen"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 16,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Village Attacks": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 90,
-        "goal": [
-            "Basis verteidigen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Castle-Defense",
-            "Figuren bewegen",
-            "Würfelproben"
-        ],
-        "theme": [
-            "Fantasy",
-            "Miniaturen"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 14,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Dawn of the Zeds": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 90,
-        "goal": [
-            "Basis verteidigen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Castle-Defense",
-            "Figuren bewegen",
-            "Würfelproben"
-        ],
-        "theme": [
-            "Horror",
-            "Miniaturen"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 16,
-        "communication": "hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Nemos War": {
-        "playercount": [
-            1,
-            2
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 90,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Push your luck",
-            "Entdeckung",
-            "Würfelproben"
-        ],
-        "theme": [
-            "Fantasy",
-            "Franchise"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Marquis": {
-        "playercount": [
-            1,
-            1
-        ],
-        "gamemodes": [
-            "solo"
-        ],
-        "time": 30,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Push your luck"
-        ],
-        "theme": [
-            "Historisches Thema",
-            "NS-Zeit",
-            "Widerstand"
-        ],
-        "language": [
-            "EN"
-        ],
-        "age": 12,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Villen des Wahnsinns 1st": {
-        "playercount": [
-            2,
-            5
-        ],
-        "gamemodes": [
-            "one vs. All"
-        ],
-        "time": 120,
-        "goal": [
-            "Aufgaben erfüllen",
-            "Boss besiegen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Encounter",
-            "Würfelproben",
-            "Narrativ",
-            "Erkundung"
-        ],
-        "theme": [
-            "Ermittler",
-            "Horror",
-            "Miniaturen",
-            "lokal",
-            "Spielleiter"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 16,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Villen des Wahnsinns 2nd": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 120,
-        "goal": [
-            "Aufgaben erfüllen",
-            "Boss besiegen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Encounter",
-            "Würfelproben",
-            "Narrativ",
-            "Erkundung",
-            "APP"
-        ],
-        "theme": [
-            "Ermittler",
-            "Horror",
-            "Miniaturen",
-            "lokal",
-            "APP"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 16,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "The Reckoners": {
-        "playercount": [
-            1,
-            5
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 90,
-        "goal": [
-            "Boss besiegen"
-        ],
-        "gametype": "Brettspiel, Würfelspiel",
-        "gamemechanics": [
-            "Würfeleinsatz",
-            "gleichzeitig spielen",
-            "Charakterentwicklung"
-        ],
-        "theme": [
-            "Miniaturen",
-            "Franchise",
-            "Helden"
-        ],
-        "language": [
-            "EN"
-        ],
-        "age": 14,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Co2": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 120,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Brettspiel",
-        "gamemechanics": [
-            "Euro",
-            "Worker placment",
-            "Area Control"
-        ],
-        "theme": [
-            "Wirtschaftssimulation",
-            "Klimawandel"
-        ],
-        "language": [
-            "DE",
-            "EN"
-        ],
-        "age": 14,
-        "communication": "hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Der Unterhändler": {
-        "playercount": [
-            1,
-            1
-        ],
-        "gamemodes": [
-            "solo"
-        ],
-        "time": 60,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Kartenspiel, Würfelspiel",
-        "gamemechanics": [
-            "Hand Management",
-            "Würfel",
-            "Push your luck"
-        ],
-        "theme": [
-            "Ermittler",
-            "Realität"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 14,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Orchard": {
-        "playercount": [
-            1,
-            1
-        ],
-        "gamemodes": [
-            "solo"
-        ],
-        "time": 10,
-        "goal": [
-            "Highscore"
-        ],
-        "gametype": "Kartenspiel",
-        "gamemechanics": [
-            "Musterbau",
-            "Legespiel"
-        ],
-        "theme": [
-            "Pflanzen"
-        ],
-        "language": [
-            "EN"
-        ],
-        "age": 8,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Roll Player": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "kompetitiv",
-            "solo"
-        ],
-        "time": 90,
-        "goal": [
-            "Highscore",
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Würfelspiel",
-        "gamemechanics": [
-            "Würfeleinsatz ",
-            "Würfelziehen",
-            "Charakterentwicklung"
-        ],
-        "theme": [
-            "Fantasy",
-            "abstrakt"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "niedrig",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Flügelschlag": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "kompetitiv",
-            "solo"
-        ],
-        "time": 60,
-        "goal": [
-            "Highscore"
-        ],
-        "gametype": "Brettspiel, Kartenspiel",
-        "gamemechanics": [
-            "Kollektioen"
-        ],
-        "theme": [
-            "Tiere",
-            "Realität",
-            "pädagogisch"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "niedrig",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Top Ten": {
-        "playercount": [
-            4,
-            8
-        ],
-        "gamemodes": [
-            "kooperativ"
-        ],
-        "time": 30,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Partyspiel",
-        "gamemechanics": [
-            "geheime Informationen",
-            "Erzählen",
-            "Verbindungen herstellen"
-        ],
-        "theme": [
-            "Kreativität"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 16,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Revelations": {
-        "playercount": [
-            1,
-            6
-        ],
-        "gamemodes": [
-            "kooperativ"
-        ],
-        "time": 30,
-        "goal": [
-            "Highscore"
-        ],
-        "gametype": "Partyspiel",
-        "gamemechanics": [
-            "geheime Informationen",
-            "Erzählen",
-            "andere Einschätzen"
-        ],
-        "theme": [
-            "Gefühle",
-            "sich besser kenenlernen"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 16,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Cross Clues": {
-        "playercount": [
-            2,
-            6
-        ],
-        "gamemodes": [
-            "kooperativ"
-        ],
-        "time": 10,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Partyspiel",
-        "gamemechanics": [
-            "geheime Informationen",
-            "Erzählen",
-            "Verbindungen herstellen"
-        ],
-        "theme": [
-            "abstrakt",
-            "Kreativität",
-            "Sprache"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Codenames Duett": {
-        "playercount": [
-            2,
-            8
-        ],
-        "gamemodes": [
-            "kooperativ"
-        ],
-        "time": 30,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Partyspiel",
-        "gamemechanics": [
-            "geheime Informationen",
-            "Erzählen",
-            "Verbindungen herstellen"
-        ],
-        "theme": [
-            "abstrakt",
-            "Kreativität",
-            "Sprache"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 14,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Just One": {
-        "playercount": [
-            2,
-            7
-        ],
-        "gamemodes": [
-            "kooperativ"
-        ],
-        "time": 30,
-        "goal": [
-            "Highscore"
-        ],
-        "gametype": "Partyspiel",
-        "gamemechanics": [
-            "geheime Informationen",
-            "Verbindungen herstellen"
-        ],
-        "theme": [
-            "abstrakt",
-            "Kreativität",
-            "Sprache"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "eingeschränkt",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Unüblichen Verdächtigen": {
-        "playercount": [
-            2,
-            6
-        ],
-        "gamemodes": [
-            "kooperativ"
-        ],
-        "time": 20,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Partyspiel",
-        "gamemechanics": [
-            "geheime Informationen",
-            "Erzählen",
-            "andere Einschätzen"
-        ],
-        "theme": [
-            "Ermittler",
-            "Klischee",
-            "Sprache"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 14,
-        "communication": "sehr hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "Sprawlopolis": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ"
-        ],
-        "time": 30,
-        "goal": [
-            "Highscore"
-        ],
-        "gametype": "Legespiel, Kartenspiel",
-        "gamemechanics": [
-            "Legespiel",
-            "Optimierung"
-        ],
-        "theme": [
-            "Stadtbau",
-            "Moderne",
-            "Planung"
-        ],
-        "language": [
-            "DE",
-            "EN"
-        ],
-        "age": 12,
-        "communication": "hoch",
-        "campaign": "nein",
-        "oneshots": "ja"
-    },
-    "City Builder: Ancient World": {
-        "playercount": [
-            1,
-            4
-        ],
-        "gamemodes": [
-            "Solo",
-            "kooperativ",
-            "kompetitiv"
-        ],
-        "time": 60,
-        "goal": [
-            "Aufgaben erfüllen"
-        ],
-        "gametype": "Legespiel",
-        "gamemechanics": [
-            "Legespiel",
-            "Optimierung"
-        ],
-        "theme": [
-            "Stadtbau",
-            "Antike",
-            "Planung"
-        ],
-        "language": [
-            "DE"
-        ],
-        "age": 12,
-        "communication": "niedrig",
-        "campaign": "nein",
-        "oneshots": "ja"
-    }
+{
+    "criterias": [
+        {
+            "name": "playercount",
+            "display": "Spielerzahl",
+            "filter_type_a": "single_number",
+            "stored_type_b": "double_number",
+            "question": "Wie viele Leute spielen mit?",
+            "matches_if": "b_min<=a<=b_max"
+        },
+        {
+            "name": "gamemodes",
+            "display": "Modi",
+            "filter_type_a": "set",
+            "stored_type_b": "set",
+            "question": "Welche Spielmodi?",
+            "matches_if": "b_contains_a"
+        },
+        {
+            "name": "time",
+            "display": "Dauer",
+            "filter_type_a": "double_number",
+            "stored_type_b": "single_number",
+            "question": "Wie viel Zeit habt ihr?",
+            "matches_if": "a_min<=b<=a_max"
+        },
+        {
+            "name": "goal",
+            "display": "Ziel",
+            "filter_type_a": "set",
+            "stored_type_b": "set",
+            "question": "Was soll das Ziel des Spiels sein?",
+            "matches_if": "b_contains_a"
+        },
+        {
+            "name": "gametype",
+            "display": "Typ",
+            "filter_type_a": "set",
+            "stored_type_b": "set",
+            "question": "Was für ein Typ soll das Spiel sein?",
+            "matches_if": "b_contains_a"
+        },
+        {
+            "name": "gamemechanics",
+            "display": "Mechaniken",
+            "filter_type_a": "set",
+            "stored_type_b": "set",
+            "question": "Welche Mechaniken soll es geben",
+            "matches_if": "b_contains_a"
+        },
+        {
+            "name": "theme",
+            "display": "Thema",
+            "filter_type_a": "set",
+            "stored_type_b": "set",
+            "question": "Welche Themen kommen in Frage",
+            "matches_if": "b_contains_a"
+        },
+        {
+            "name": "language",
+            "display": "Sprache",
+            "filter_type_a": "set",
+            "stored_type_b": "set",
+            "question": "Welche Sprachen darf das Spiel haben",
+            "matches_if": "b_contains_a"
+        },
+        {
+            "name": "age",
+            "display": "Alter",
+            "filter_type_a": "single_number",
+            "stored_type_b": "single_number",
+            "question": "Wie alt ist der jüngste Spieler",
+            "matches_if": "a>=b"
+        },
+        {
+            "name": "communication",
+            "display": "Kommunikation",
+            "filter_type_a": "set",
+            "stored_type_b": "set",
+            "question": "Wie soll die Kommunikation zwischen den Spielern sein",
+            "matches_if": "b_contains_a"
+        },
+        {
+            "name": "campaign",
+            "display": "Kampagne",
+            "filter_type_a": "bool",
+            "stored_type_b": "bool",
+            "question": "Soll es eine Kampagne geben?",
+            "matches_if": "a=b"
+        },
+        {
+            "name": "oneshots",
+            "display": "Oneshots",
+            "filter_type_a": "bool",
+            "stored_type_b": "bool",
+            "question": "Soll es Oneshots geben",
+            "matches_if": "a=b"
+        }
+    ],
+    "games": [
+        {
+            "name": "Kitchen Rush",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 20,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Echtzeit",
+                "gleichzeitig spielen"
+            ],
+            "theme": [
+                "Lebensmittel",
+                "Berufsleben",
+                "Realit�t"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 10,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": true,
+            "oneshots": false
+        },
+        {
+            "name": "Legenden von Andor",
+            "playercount": [
+                1,
+                6
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 90,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "gleichzeitig spielen",
+                "wuerfeln",
+                "Figuren bewegen",
+                "Charakterentwicklung"
+            ],
+            "theme": [
+                "Helden",
+                "Fantasy"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 8,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": true,
+            "oneshots": false
+        },
+        {
+            "name": "Marvel United",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 45,
+            "goal": [
+                "Boss besiegen",
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Brettspiel",
+                "Kartenspiel"
+            ],
+            "gamemechanics": [
+                "Kartenspiel",
+                "Hand Management",
+                "Figuren bewegen"
+            ],
+            "theme": [
+                "Helden",
+                "Comic",
+                "Miniaturen",
+                "Franchise"
+            ],
+            "language": [
+                "Deutsch",
+                "Englisch"
+            ],
+            "age": 8,
+            "communication": [
+                "hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Harry Potter � Schlacht um Hogwarts",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 60,
+            "goal": [
+                "Gegner besiegen"
+            ],
+            "gametype": [
+                "Kartenspiel"
+            ],
+            "gamemechanics": [
+                "Deckbuilder",
+                "Charakterentwicklung"
+            ],
+            "theme": [
+                "Legacy",
+                "Fantasy",
+                "Franchise",
+                "Zauberer"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 10,
+            "communication": [
+                "hoch"
+            ],
+            "campaign": true,
+            "oneshots": true
+        },
+        {
+            "name": "Kneipenquiz",
+            "playercount": [
+                1,
+                2
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 45,
+            "goal": [
+                "KI Gegner besiegen",
+                "Rennen"
+            ],
+            "gametype": [
+                "Partyspiel"
+            ],
+            "gamemechanics": [
+                "Quiz",
+                "Rennen"
+            ],
+            "theme": [
+                "Quiz",
+                "Fragen ohne Antwortm�glichkeiten"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Phantom the Card Game",
+            "playercount": [
+                1,
+                2
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 45,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Kartenspiel"
+            ],
+            "gamemechanics": [
+                "Deckbuilder",
+                "Hand Management"
+            ],
+            "theme": [
+                "Helden",
+                "Comic",
+                "Franchise"
+            ],
+            "language": [
+                "Englisch"
+            ],
+            "age": 10,
+            "communication": [
+                "Leicht eingesch�nkt"
+            ],
+            "campaign": true,
+            "oneshots": true
+        },
+        {
+            "name": "The Game",
+            "playercount": [
+                1,
+                5
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 15,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Kartenspiel"
+            ],
+            "gamemechanics": [
+                "Kartenspiel",
+                "Hand Management",
+                "Anlegen"
+            ],
+            "theme": [
+                "abstrakt"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 8,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Belratti",
+            "playercount": [
+                2,
+                7
+            ],
+            "gamemodes": [
+                "kooperativ"
+            ],
+            "time": 30,
+            "goal": [
+                "Highscore"
+            ],
+            "gametype": [
+                "Kartenspiel",
+                "Partyspiel"
+            ],
+            "gamemechanics": [
+                "Kartenspiel",
+                "Deduktion"
+            ],
+            "theme": [
+                "Kunstgalerie",
+                "abstrakt",
+                "Partyspiel"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 10,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Mysterium",
+            "playercount": [
+                2,
+                6
+            ],
+            "gamemodes": [
+                "kooperativ"
+            ],
+            "time": 60,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Partyspiel",
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Deduktion"
+            ],
+            "theme": [
+                "Mystisch",
+                "Partyspiel",
+                "abstrakt",
+                "Kreativit�t"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "stark eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Dixit",
+            "playercount": [
+                3,
+                6
+            ],
+            "gamemodes": [
+                "kompetitiv"
+            ],
+            "time": 30,
+            "goal": [
+                "Rennen"
+            ],
+            "gametype": [
+                "Partyspiel",
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Deduktion",
+                "Storytelling",
+                "Rennen"
+            ],
+            "theme": [
+                "Partyspiel",
+                "abstrakt"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "stark eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Das �ltere Zeichen",
+            "playercount": [
+                1,
+                8
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 60,
+            "goal": [
+                "Boss besiegen",
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Kartenspiel",
+                "Wuerfelspiel"
+            ],
+            "gamemechanics": [
+                "Encounter",
+                "Wuerfel und Karten",
+                "Kniffelmechanik"
+            ],
+            "theme": [
+                "Lovecraft",
+                "Horror",
+                "Ermittler",
+                "lokal"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 14,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Eldritch Horror",
+            "playercount": [
+                1,
+                8
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 120,
+            "goal": [
+                "Aufgaben erfuellen",
+                "Boss besiegen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Encounter",
+                "Wuerfelproben"
+            ],
+            "theme": [
+                "Lovecraft",
+                "Horror",
+                "Ermittler",
+                "Abenteuer"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 14,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Arkham Horror LCG",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 90,
+            "goal": [
+                "Aufgaben erfuellen",
+                "Gegner besiegen"
+            ],
+            "gametype": [
+                "Kartenspiel"
+            ],
+            "gamemechanics": [
+                "Deckbuilder",
+                "Encounter",
+                "Proben",
+                "Narrativ"
+            ],
+            "theme": [
+                "Lovecraft",
+                "Horror",
+                "Ermittler",
+                "lokal"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 14,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": true,
+            "oneshots": true
+        },
+        {
+            "name": "Orleans Invasions",
+            "playercount": [
+                1,
+                5
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 90,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Bagbuilder",
+                "Euro"
+            ],
+            "theme": [
+                "Mittelater",
+                "Wirtschaftssimulation"
+            ],
+            "language": [
+                "Deutsch",
+                "Englisch"
+            ],
+            "age": 12,
+            "communication": [
+                "mittel"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Vanguard of War",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 120,
+            "goal": [
+                "Basis verteidigen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Castle-Defense",
+                "Figuren bewegen",
+                "Wuerfelproben"
+            ],
+            "theme": [
+                "Horror",
+                "Fantasy",
+                "SciFi",
+                "Miniaturen"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 16,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Village Attacks",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 90,
+            "goal": [
+                "Basis verteidigen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Castle-Defense",
+                "Figuren bewegen",
+                "Wuerfelproben"
+            ],
+            "theme": [
+                "Fantasy",
+                "Miniaturen"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 14,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Dawn of the Zeds",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 90,
+            "goal": [
+                "Basis verteidigen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Castle-Defense",
+                "Figuren bewegen",
+                "Wuerfelproben"
+            ],
+            "theme": [
+                "Horror",
+                "Miniaturen"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 16,
+            "communication": [
+                "hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Nemos War",
+            "playercount": [
+                1,
+                2
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 90,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Push your luck",
+                "Entdeckung",
+                "Wuerfelproben"
+            ],
+            "theme": [
+                "Fantasy",
+                "Franchise"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Marquis",
+            "playercount": [
+                1,
+                1
+            ],
+            "gamemodes": [
+                "solo"
+            ],
+            "time": 30,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Push your luck"
+            ],
+            "theme": [
+                "Historisches Thema",
+                "NS-Zeit",
+                "Widerstand"
+            ],
+            "language": [
+                "Englisch"
+            ],
+            "age": 12,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Villen des Wahnsinns 1st",
+            "playercount": [
+                2,
+                5
+            ],
+            "gamemodes": [
+                "one vs. All"
+            ],
+            "time": 120,
+            "goal": [
+                "Aufgaben erfuellen",
+                "Boss besiegen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Encounter",
+                "Wuerfelproben",
+                "Narrativ",
+                "Erkundung"
+            ],
+            "theme": [
+                "Ermittler",
+                "Horror",
+                "Miniaturen",
+                "lokal",
+                "Spielleiter"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 16,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Villen des Wahnsinns 2nd",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 120,
+            "goal": [
+                "Aufgaben erfuellen",
+                "Boss besiegen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Encounter",
+                "Wuerfelproben",
+                "Narrativ",
+                "Erkundung",
+                "APP"
+            ],
+            "theme": [
+                "Ermittler",
+                "Horror",
+                "Miniaturen",
+                "lokal",
+                "APP"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 16,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "The Reckoners",
+            "playercount": [
+                1,
+                5
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 90,
+            "goal": [
+                "Boss besiegen"
+            ],
+            "gametype": [
+                "Brettspiel",
+                "Wuerfelspiel"
+            ],
+            "gamemechanics": [
+                "Wuerfeleinsatz",
+                "gleichzeitig spielen",
+                "Charakterentwicklung"
+            ],
+            "theme": [
+                "Miniaturen",
+                "Franchise",
+                "Helden"
+            ],
+            "language": [
+                "Englisch"
+            ],
+            "age": 14,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Co2",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 120,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Brettspiel"
+            ],
+            "gamemechanics": [
+                "Euro",
+                "Worker placment",
+                "Area Control"
+            ],
+            "theme": [
+                "Wirtschaftssimulation",
+                "Klimawandel"
+            ],
+            "language": [
+                "Deutsch",
+                "Englisch"
+            ],
+            "age": 14,
+            "communication": [
+                "hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Der Unterh�ndler",
+            "playercount": [
+                1,
+                1
+            ],
+            "gamemodes": [
+                "solo"
+            ],
+            "time": 60,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Kartenspiel",
+                "Wuerfelspiel"
+            ],
+            "gamemechanics": [
+                "Hand Management",
+                "Wuerfel",
+                "Push your luck"
+            ],
+            "theme": [
+                "Ermittler",
+                "Realit�t"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 14,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Orchard",
+            "playercount": [
+                1,
+                1
+            ],
+            "gamemodes": [
+                "solo"
+            ],
+            "time": 10,
+            "goal": [
+                "Highscore"
+            ],
+            "gametype": [
+                "Kartenspiel"
+            ],
+            "gamemechanics": [
+                "Musterbau",
+                "Legespiel"
+            ],
+            "theme": [
+                "Pflanzen"
+            ],
+            "language": [
+                "Englisch"
+            ],
+            "age": 8,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Roll Player",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "kompetitiv",
+                "solo"
+            ],
+            "time": 90,
+            "goal": [
+                "Highscore",
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Wuerfelspiel"
+            ],
+            "gamemechanics": [
+                "Wuerfeleinsatz ",
+                "Wuerfelziehen",
+                "Charakterentwicklung"
+            ],
+            "theme": [
+                "Fantasy",
+                "abstrakt"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "niedrig"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Fluegelschlag",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "kompetitiv",
+                "solo"
+            ],
+            "time": 60,
+            "goal": [
+                "Highscore"
+            ],
+            "gametype": [
+                "Brettspiel",
+                "Kartenspiel"
+            ],
+            "gamemechanics": [
+                "Kollektioen"
+            ],
+            "theme": [
+                "Tiere",
+                "Realit�t",
+                "p�dagogisch"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "niedrig"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Top Ten",
+            "playercount": [
+                4,
+                8
+            ],
+            "gamemodes": [
+                "kooperativ"
+            ],
+            "time": 30,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Partyspiel"
+            ],
+            "gamemechanics": [
+                "geheime Informationen",
+                "Erz�hlen",
+                "Verbindungen herstellen"
+            ],
+            "theme": [
+                "Kreativit�t"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 16,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Revelations",
+            "playercount": [
+                1,
+                6
+            ],
+            "gamemodes": [
+                "kooperativ"
+            ],
+            "time": 30,
+            "goal": [
+                "Highscore"
+            ],
+            "gametype": [
+                "Partyspiel"
+            ],
+            "gamemechanics": [
+                "geheime Informationen",
+                "Erz�hlen",
+                "andere Einsch�tzen"
+            ],
+            "theme": [
+                "Gefuehle",
+                "sich besser kenenlernen"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 16,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Cross Clues",
+            "playercount": [
+                2,
+                6
+            ],
+            "gamemodes": [
+                "kooperativ"
+            ],
+            "time": 10,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Partyspiel"
+            ],
+            "gamemechanics": [
+                "geheime Informationen",
+                "Erz�hlen",
+                "Verbindungen herstellen"
+            ],
+            "theme": [
+                "abstrakt",
+                "Kreativit�t",
+                "Sprache"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Codenames Duett",
+            "playercount": [
+                2,
+                8
+            ],
+            "gamemodes": [
+                "kooperativ"
+            ],
+            "time": 30,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Partyspiel"
+            ],
+            "gamemechanics": [
+                "geheime Informationen",
+                "Erz�hlen",
+                "Verbindungen herstellen"
+            ],
+            "theme": [
+                "abstrakt",
+                "Kreativit�t",
+                "Sprache"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 14,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Just One",
+            "playercount": [
+                2,
+                7
+            ],
+            "gamemodes": [
+                "kooperativ"
+            ],
+            "time": 30,
+            "goal": [
+                "Highscore"
+            ],
+            "gametype": [
+                "Partyspiel"
+            ],
+            "gamemechanics": [
+                "geheime Informationen",
+                "Verbindungen herstellen"
+            ],
+            "theme": [
+                "abstrakt",
+                "Kreativit�t",
+                "Sprache"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "eingeschr�nkt"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Unueblichen Verd�chtigen",
+            "playercount": [
+                2,
+                6
+            ],
+            "gamemodes": [
+                "kooperativ"
+            ],
+            "time": 20,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Partyspiel"
+            ],
+            "gamemechanics": [
+                "geheime Informationen",
+                "Erz�hlen",
+                "andere Einsch�tzen"
+            ],
+            "theme": [
+                "Ermittler",
+                "Klischee",
+                "Sprache"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 14,
+            "communication": [
+                "sehr hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "Sprawlopolis",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ"
+            ],
+            "time": 30,
+            "goal": [
+                "Highscore"
+            ],
+            "gametype": [
+                "Legespiel",
+                "Kartenspiel"
+            ],
+            "gamemechanics": [
+                "Legespiel",
+                "Optimierung"
+            ],
+            "theme": [
+                "Stadtbau",
+                "Moderne",
+                "Planung"
+            ],
+            "language": [
+                "Deutsch",
+                "Englisch"
+            ],
+            "age": 12,
+            "communication": [
+                "hoch"
+            ],
+            "campaign": false,
+            "oneshots": true
+        },
+        {
+            "name": "City Builder: Ancient World",
+            "playercount": [
+                1,
+                4
+            ],
+            "gamemodes": [
+                "solo",
+                "kooperativ",
+                "kompetitiv"
+            ],
+            "time": 60,
+            "goal": [
+                "Aufgaben erfuellen"
+            ],
+            "gametype": [
+                "Legespiel"
+            ],
+            "gamemechanics": [
+                "Legespiel",
+                "Optimierung"
+            ],
+            "theme": [
+                "Stadtbau",
+                "Antike",
+                "Planung"
+            ],
+            "language": [
+                "Deutsch"
+            ],
+            "age": 12,
+            "communication": [
+                "niedrig"
+            ],
+            "campaign": false,
+            "oneshots": true
+        }
+    ]
 }

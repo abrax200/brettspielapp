@@ -29,6 +29,7 @@
     backdrop-filter: var(--bdfilter);
     overflow: hidden;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .searchbar_container{
@@ -52,14 +53,14 @@
     padding: 0px 14px;
     margin: 5px;
     border: none;
-    border-radius: 100vmax;
+    border-radius: 10px;
     color: var(--font-color);
     font-family: 'Roboto', sans-serif;
     font-size:16px;
-    background-image:linear-gradient(var(--red), var(--red2));
-    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 25px transparent, 0px 0px 5px var(--middle);
+    background-color:rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
     vertical-align:bottom;
-    transition: box-shadow 0.5s, background-color 0.5s;
 }
 
 .filter-button>div>svg{
@@ -70,8 +71,9 @@
 }
 
 .filter-button:active{
-    transform:scale(.9, .9);
-    transition: transform .5s;
+    transform:scale(.95, .95);
+    color: var(--accent);
+    transition: transform .5s, color .1s;
 }
 
 .filter-button:active>div>svg>g>*{
@@ -85,21 +87,43 @@
 
 .gamecard_container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: min-content;
     grid-gap: 25px;
     margin: 25px 25px;
 }
 
+.FilterCriteriaContainer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: min-content;
+    row-gap: 20px;
+    column-gap: 20px;
+    width: 100%;
+}
+
 .gamecard{
     overflow: hidden;
     background: var(--shade2);
+    border: 1px solid var(--border);
     box-shadow: var(--shadow);
+
     border-radius: var(--radius);
-    height: 100%;
+    height: min-content;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.gamecard.spacing{
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.025);
 }
 
 .criteria_container{
@@ -121,6 +145,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid var(--border);
 }
 
 .criteria_vertical_center{
@@ -142,37 +167,37 @@
 .criteria_value{
     width: 100%;
     box-sizing: border-box;
-    height: 22px;
+    height: 24px;
+    border: 1px solid var(--border);
     border-radius: 100vmax;
     box-shadow: inset 2px 3.5px 10px rgba(0, 0, 0, 0.2);
     padding: 6px;
 }
 
 .criteria_value>div{
+    box-sizing:border-box;
     border-radius: 100vmax;
     width: 100%;
     height: 100%;
     min-width: 10px;
-    background-image:linear-gradient(var(--red), var(--red2));
+    border: 1px solid var(--border);
+    background-color: var(--accent);
 }
 
 .criteria_val{
-    color: transparent;
-    background-image: linear-gradient(var(--red), var(--red2));
+    color: var(--red);
     background-clip: text;
-    font-family: Ubuntu, sans-serif;
-    font-size: 32px;
+    font-family: Roboto, sans-serif;
+    font-size: 26px;
     text-align: center;
 }
 
 .criteria_val.onlytext{
-    color: transparent;
-    background-image: linear-gradient(var(--red), var(--red2));
-    background-clip: text;
-    font-family: Ubuntu, sans-serif;
-    font-size: 24px;
+    color: var(--red);
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
     text-align: center;
-    hyphens: auto;
+    hyphens:unset;
     overflow: hidden;
     width: 100%;
 }
@@ -194,18 +219,19 @@
     margin: 5px;
 
     border: none;
-    border-radius: 100vmax;
+    border-radius: var(--radius);
     color: var(--font-color);
     font-family: 'Roboto', sans-serif;
     font-size:16px;
-    background-image:linear-gradient(var(--red), var(--red2));
-    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 25px transparent, 0px 0px 5px var(--middle);
-    
-    transition: box-shadow 0.5s, background-color 0.5s;
+    background-color:rgba(255, 255, 255, 0.025);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .filter_buttons_container>button:active{
-    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px var(--middle);
+    transform:scale(.9, .9);
+    color: var(--accent);
+    transition: transform .5s, color .1s;
   }
 
 .addgame_btn{
@@ -213,20 +239,22 @@
     padding: 0px 14px;
     margin: 5px;
 
+
     border: none;
-    border-radius: 100vmax;
+    border-radius: 10px;
     color: var(--font-color);
     font-family: 'Roboto', sans-serif;
     font-size:16px;
-    background-image:linear-gradient(var(--red), var(--red2));
-    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 25px transparent, 0px 0px 5px var(--middle);
-    vertical-align:middle;
-    transition: box-shadow 0.5s, background-color 0.5s;
+    background-color:rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    vertical-align:bottom;
 }
 
 .addgame_btn:active{
-    transform:scale(.9, .9);
-    transition: transform .5s;
+    transform:scale(.95, .95);
+    color: var(--accent);
+    transition: transform .5s, color .1s;
 }
 
 .addgame_btn:active>p{
@@ -240,13 +268,14 @@
     flex-direction: column;
     background-color: var(--shade2);
     width: 450px;
-    height: 500px;
+    height: min(500px, calc(100% - 20px));
+    margin: 15px;
     box-sizing: border-box;
     padding: 15px;
-    margin: 0px;
 }
 
 .gamecard .input_container{
+    border: none;
     box-shadow: none;
     margin: none;
     padding: none;
@@ -257,6 +286,7 @@
 }
 
 .gamecard .btn_container{
+    border: none;
     flex: 0 0 auto;
     display: block;
     box-shadow: none;
@@ -269,6 +299,7 @@
 }
 
 .gamecard .rest{
+    border: none;
     box-shadow: none;
     margin: none;
     padding: none;
@@ -278,7 +309,7 @@
 }
 
 .gamecard .btn_container button{
-    font-family: Ubuntu, Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     display: inline-block;
     width: 50%;
     box-sizing: border-box;
@@ -293,22 +324,22 @@
 
 .new_game_text_input{
     display: block;
-    font-size:16px;
+    font-size:18px;
     font-family: Roboto, sans-serif;
     color: var(--font-color);
     padding: 0px 10px;
     outline: none;
     border: none;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
-    border-left: 5px solid var(--middle);
+    border: 1px solid var(--border);
     background-color: rgba(255, 255, 255, 0.025);
     width: max-content;
     box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .new_game_text_input::-webkit-input-placeholder{
-    font-size:16px;
+    font-size:18px;
     font-family: Roboto, sans-serif;
     color: var(--icon-color);
 }

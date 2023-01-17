@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "capacitor-file-picker": "^1.0.10",
     "jquery": "^3.6.0",
     "rc-slider": "^9.7.2",
     "react": "^17.0.2",

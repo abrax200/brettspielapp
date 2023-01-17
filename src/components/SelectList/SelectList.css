@@ -40,13 +40,13 @@
     padding-left: 14px;
     padding-right: 14px;
     line-height: 40px;
-  
-    border-radius: 100vmax;
+    border-radius: var(--radius);
     color: var(--font-color);
+    border: 1px solid var(--border);
     font-family: 'Roboto', sans-serif;
     font-size:16px;
     background-color: rgba(255, 255, 255, 0.025);
-    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 25px rgba(0, 0, 0, 0);
+    box-shadow: var(--shadow);
     
     transition: box-shadow 0.5s, background-color 0.5s;
   }
@@ -55,30 +55,29 @@
     width: fit-content;
     height: fit-content;
     position: relative;
-    border: none;
+    border: 1px solid var(--border);
     line-height: 40px;
     padding: 0px 14px;
     margin: 5px;
   
-    border-radius: 100vmax;
-    color: var(--font-color);
+    border-radius: var(--radius);
+    color: var(--accent);
     font-family: 'Roboto', sans-serif;
     font-size:16px;
-    background-image:linear-gradient(var(--red), var(--red2));
-    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 25px transparent, 0px 0px 5px var(--middle);
+    background-color: rgba(255, 255, 255, 0.025);
+    box-shadow: var(--shadow);
     
-    transition: box-shadow 0.5s, background-color 0.5s;
+    transition: background-color 0.1s, color .1s;
   }
 
   .showmore_button:active{
-    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px var(--middle);
+    color: var(--accent);
   }
 
   /* falls aktiviert */
   .selection_main input:checked ~ .selection_tagmark {
-    background-image:linear-gradient(var(--red), var(--red2));
-    background-color: var(--middle);
-    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px var(--middle);
+    color:black;
+    background-color: var(--accentlowopacity);
   }
   
   /* Kreuz für auswahl zurücksetzen */

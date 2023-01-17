@@ -2,5 +2,9 @@
 	{
 		"pkg": "@capacitor/filesystem",
 		"classpath": "com.capacitorjs.plugins.filesystem.FilesystemPlugin"
+	},
+	{
+		"pkg": "capacitor-file-picker",
+		"classpath": "com.epicshaggy.filepicker.FilePicker"
 	}
 ]

@@ -1,0 +1,138 @@
+{
+  "criterias": [
+    {
+      "name": "playercount",
+      "display": "Spielerzahl",
+      "filter_type_a": "single_number",
+      "stored_type_b": "double_number",
+      "question": "Wie viele Leute spielen mit?",
+      "matches_if": "b_min<a<b_max"
+    },
+    {
+      "name": "gamemodes",
+      "display": "Modi",
+      "filter_type_a": "set",
+      "stored_type_b": "set",
+      "question": "Welche Spielmodi?",
+      "matches_if": "b_contains_a"
+    },
+    {
+      "name": "time",
+      "display": "Dauer",
+      "filter_type_a": "double_number",
+      "stored_type_b": "single_number",
+      "question": "Wie viel Zeit habt ihr?",
+      "matches_if": "a_min<b<a_max"
+    },
+    {
+      "name": "goal",
+      "display": "Ziel",
+      "filter_type_a": "set",
+      "stored_type_b": "set",
+      "question": "Was soll das Ziel des Spiels sein?",
+      "matches_if": "b_contains_a"
+    },
+    {
+      "name": "gametype",
+      "display": "Typ",
+      "filter_type_a": "set",
+      "stored_type_b": "set",
+      "question": "Was für ein Typ soll das Spiel sein?",
+      "matches_if": "b_contains_a"
+    },
+    {
+      "name": "gamemechanics",
+      "display": "Mechaniken",
+      "filter_type_a": "set",
+      "stored_type_b": "set",
+      "question": "Welche Mechaniken soll es geben",
+      "matches_if": "b_contains_a"
+    },
+    {
+      "name": "theme",
+      "display": "Thema",
+      "filter_type_a": "set",
+      "stored_type_b": "set",
+      "question": "Welche Themen kommen in Frage",
+      "matches_if": "b_contains_a"
+    },
+    {
+      "name": "language",
+      "display": "Sprache",
+      "filter_type_a": "set",
+      "stored_type_b": "set",
+      "question": "Welche Sprachen darf das Spiel haben",
+      "matches_if": "b_contains_a"
+    },
+    {
+      "name": "age",
+      "display": "Alter",
+      "filter_type_a": "single_number",
+      "stored_type_b": "single_number",
+      "question": "Wie alt ist der jüngste Spieler",
+      "matches_if": "a>=b"
+    },
+    {
+      "name": "communication",
+      "display": "Kommunikation",
+      "filter_type_a": "set",
+      "stored_type_b": "set",
+      "question": "Wie soll die Kommunikation zwischen den Spielern sein",
+      "matches_if": "b_contains_a"
+    },
+    {
+      "name": "campaign",
+      "display": "Kampagne",
+      "filter_type_a": "bool",
+      "stored_type_b": "bool",
+      "question": "Soll es eine Kampagne geben?",
+      "matches_if": "a=b"
+    },
+    {
+      "name": "oneshots",
+      "display": "Oneshots",
+      "filter_type_a": "bool",
+      "stored_type_b": "bool",
+      "question": "Soll es Oneshots geben",
+      "matches_if": "a=b"
+    }
+  ],
+  "games": [
+    {
+      "name": "Kitchen Rush",
+      "playercount": [
+        1,
+        4
+      ],
+      "gamemodes": [
+        "Solo",
+        "kooperativ"
+      ],
+      "time": 10,
+      "goal": [
+        "Aufgaben erfüllen"
+      ],
+      "gametype": [
+        "Brettspiel"
+      ],
+      "gamemechanics": [
+        "Echtzeit",
+        "gleichzeitig spielen"
+      ],
+      "theme": [
+        "Lebensmittel",
+        "Berufsleben",
+        "Realität"
+      ],
+      "language": [
+        "Deutsch"
+      ],
+      "age": 10,
+      "communication": [
+        "sehr hoch"
+      ],
+      "campaign": true,
+      "oneshots": "no"
+    }
+  ]
+}
