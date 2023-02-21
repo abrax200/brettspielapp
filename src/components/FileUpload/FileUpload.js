@@ -8,8 +8,8 @@ function FileUpload(){
         <>
         <div>
         <input className="Fileupload_input" placeholder="URL zu CSV" type="text" onChange={(e) => url = e.currentTarget.value}/>
-        <button className="Fileupload_button" onClick={() => {;DriveFetch(url)}}>CSV Laden</button>
-        <button className="Fileupload_button" onClick={() => {;DriveFetch("https://drive.google.com/u/0/uc?id=1F7sb1rRgtdsxs7QM_L1j8VxhUrTO08j0&export=download")}}>Sammlung von Herrn Stober Laden</button>
+        <button className="Fileupload_button" onClick={() => {DriveFetch(url)}}>CSV Laden</button>
+        <button className="Fileupload_button" onClick={() => {DriveFetch("https://drive.google.com/u/0/uc?id=1F7sb1rRgtdsxs7QM_L1j8VxhUrTO08j0&export=download")}}>Sammlung von Herrn Stober Laden</button>
         </div>
         </>
     )
@@ -37,6 +37,7 @@ async function DriveFetch(url){
     console.log(Dataset.csv2Collection(csv))
     Dataset.saveCollection()
     Dataset.CheckForFile()
+    Dataset.onDelete()
     return(csv)
 
 }

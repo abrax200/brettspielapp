@@ -167,7 +167,7 @@ class dataset{
             (err) => console.error(err)
         )
         console.log(this)
-        this.collection = {games:[], criterias:[]}
+        this.collection = {Collection}
         this.saveCollection()
         console.log(this.collection)
     }
@@ -188,7 +188,7 @@ class dataset{
     }
 
     async deleteGame(name){
-        delete this.collection[name]
+        this.collection.games = this.collection.games.filter((e) => e.name !== name)
         this.saveCollection()
         this.onDelete()
     }

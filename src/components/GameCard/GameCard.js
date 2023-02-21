@@ -41,6 +41,7 @@ export default function GameCard(props){
                 onClick={() => {
                     if (window.confirm("Wollen sie dieses wirklich Spiel löschen?")){
                         Dataset.deleteGame(props.name)
+                        console.log("deleted")
                     }
                 }}
                 >╳</button>

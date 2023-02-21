@@ -5,7 +5,7 @@
             "display": "Spielerzahl",
             "filter_type_a": "single_number",
             "stored_type_b": "double_number",
-            "question": "Wie viele Leute spielen mit?",
+            "question": "Wie viele Leute können das Spiel spielen?",
             "matches_if": "b_min<=a<=b_max"
         },
         {
@@ -13,7 +13,7 @@
             "display": "Modi",
             "filter_type_a": "set",
             "stored_type_b": "set",
-            "question": "Welche Spielmodi?",
+            "question": "Welche Spielmodi gibt es?",
             "matches_if": "b_contains_a"
         },
         {
@@ -21,7 +21,7 @@
             "display": "Dauer",
             "filter_type_a": "double_number",
             "stored_type_b": "single_number",
-            "question": "Wie viel Zeit habt ihr?",
+            "question": "Wie viel Zeit benötigt man ungefähr?",
             "matches_if": "a_min<=b<=a_max"
         },
         {
@@ -29,7 +29,7 @@
             "display": "Ziel",
             "filter_type_a": "set",
             "stored_type_b": "set",
-            "question": "Was soll das Ziel des Spiels sein?",
+            "question": "Was ist das Ziel des Spiels?",
             "matches_if": "b_contains_a"
         },
         {
@@ -37,7 +37,7 @@
             "display": "Typ",
             "filter_type_a": "set",
             "stored_type_b": "set",
-            "question": "Was für ein Typ soll das Spiel sein?",
+            "question": "Was für ein Typ von Spiel ist es?",
             "matches_if": "b_contains_a"
         },
         {
@@ -45,7 +45,7 @@
             "display": "Mechaniken",
             "filter_type_a": "set",
             "stored_type_b": "set",
-            "question": "Welche Mechaniken soll es geben",
+            "question": "Welche Mechaniken gibt es?",
             "matches_if": "b_contains_a"
         },
         {
@@ -53,7 +53,7 @@
             "display": "Thema",
             "filter_type_a": "set",
             "stored_type_b": "set",
-            "question": "Welche Themen kommen in Frage",
+            "question": "Welche Themen hat dieses Spiel?",
             "matches_if": "b_contains_a"
         },
         {
@@ -61,7 +61,7 @@
             "display": "Sprache",
             "filter_type_a": "set",
             "stored_type_b": "set",
-            "question": "Welche Sprachen darf das Spiel haben",
+            "question": "Welche Sprachen darf das Spiel haben?",
             "matches_if": "b_contains_a"
         },
         {
@@ -69,7 +69,7 @@
             "display": "Alter",
             "filter_type_a": "single_number",
             "stored_type_b": "single_number",
-            "question": "Wie alt ist der jüngste Spieler",
+            "question": "Wie alt ist der jüngste Spieler?",
             "matches_if": "a>=b"
         },
         {
@@ -77,7 +77,7 @@
             "display": "Kommunikation",
             "filter_type_a": "set",
             "stored_type_b": "set",
-            "question": "Wie soll die Kommunikation zwischen den Spielern sein",
+            "question": "Wie ist die Kommunikation zwischen den Spielern?",
             "matches_if": "b_contains_a"
         },
         {
@@ -85,7 +85,7 @@
             "display": "Kampagne",
             "filter_type_a": "bool",
             "stored_type_b": "bool",
-            "question": "Soll es eine Kampagne geben?",
+            "question": "Gibt es eine Kampagne?",
             "matches_if": "a=b"
         },
         {
@@ -93,7 +93,7 @@
             "display": "Oneshots",
             "filter_type_a": "bool",
             "stored_type_b": "bool",
-            "question": "Soll es Oneshots geben",
+            "question": "Gibt es Oneshots?",
             "matches_if": "a=b"
         }
     ],
@@ -122,7 +122,7 @@
             "theme": [
                 "Lebensmittel",
                 "Berufsleben",
-                "Realit�t"
+                "Realitaet"
             ],
             "language": [
                 "Deutsch"
